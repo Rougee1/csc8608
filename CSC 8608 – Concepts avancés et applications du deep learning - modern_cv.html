@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Gaël Thomas">
+
+	    <title>CSC 8608 &ndash; Concepts avancés et applications du deep learning - modern_cv</title>
+  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans&#038;'/>
+  <link rel='stylesheet' type='text/css' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/wp/wp-content/themes/tsp-inf/bootstrap/css/bootstrap-reboot.min.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/wp/wp-content/themes/tsp-inf/style.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/wp/wp-content/themes/tsp-inf/tsp/style.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/infra-web-cours/current/tsp.css'/>
+  </head>
+
+	<body>
+		<div class='header'>
+      <a class='logo' href="https://www.telecom-sudparis.eu">
+  <img src="../../infra-web-cours/wp/wp-content/themes/tsp-inf/tsp.png" 
+	     alt="Telecom SudParis"/>
+</a>
+      
+			<a class='title' href="?page=main">
+				<h1>CSC 8608 &ndash; Concepts avancés et applications du deep learning</h1>
+			</a>
+      
+			<a class='tagline' href="https://www-inf.telecom-sudparis.eu/COURS/infra-web-cours/portail/">
+				Portail informatique			</a>
+
+			<div class='navbar dropdown-area'>
+				<div class='navbar-toggler dropdown-button' id='main-menu'><!-- style='background-color: cyan;'> -->
+					<div class="navbar-toggler-icon"></div>
+				</div>
+
+				<div class='navbar-menu tsp-menu' data-toggler='main-menu'><!-- style='background-color: lightgreen;'> -->
+					<div id="chapters-list">
+<ul class="current-week" data-current-week="8">
+	<li>
+		Liens utiles
+		<ul>
+			<li><a href="?page=main">Pr&#xE9;sentation</a></li>
+                        <li><a href="?page=planning">Emploi du temps</a></li>
+			<li><a href="?page=modalite">Notation</a></li>
+            <li><a href="?page=exercices/project">Projet</a></li>
+		</ul>
+	</li>
+
+  <li>
+    Supports
+    <ul class="chapitres">
+        <li>
+            <div class="chapter-id">CI1</div>
+            <div class="chapter-title">Modern Computer Vision</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/modern_cv.pdf">Cours</a>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/modern_cv&amp;wrap=true">Exercices</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+<ul>
+<li>Vision moderne</li>
+<li>ViT &amp; Swin</li>
+<li>YOLO &amp; DETR</li>
+<li>SAM segmentation</li>
+<li>MLOps vision</li> </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CM1</div>
+            <div class="chapter-title">Reading and presenting scientific publications</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/02_course_structure_reading_a_paper_presentation_tips.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                    <li>Introduction to the assignment</li>
+                    <li>How to read a scientific publication</li>
+                    <li>Presentation tips</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI2</div>
+            <div class="chapter-title">G&#xE9;n&#xE9;ration d'image</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/image_generation.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/image_generation&amp;wrap=true">Exercices</a>
+                    </li>
+		    <li>
+<a class="all-in-one" href="?page=cours/cc1&amp;wrap=true">Pr&#xE9;paration CC1</a> </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+			<ul>
+			  <li>Mod&#xE8;les g&#xE9;n&#xE9;ratifs</li>
+			  <li>Diffusion latente</li>
+			  <li>Conditionnement texte</li>
+			  <li>Param&#xE8;tres d'inf&#xE9;rence</li>
+			  <li>&#xC9;valuation d'images</li>
+			</ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI3</div>
+            <div class="chapter-title">Deep learning pour l'audio</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/audio.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/audio&amp;wrap=true">Exercices</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                  <li>Log-Mel spectrogram</li>
+                  <li>Self-supervised learning</li>
+                  <li>Whisper ASR</li>
+                  <li>Conformer</li>
+                  <li>Vocoder</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI4</div>
+            <div class="chapter-title">Graph Neural Networks</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/gnn.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/gnn&amp;wrap=true">Exercices</a>
+                    </li>
+		    <li>
+<a class="all-in-one" href="?page=cours/cc2&amp;wrap=true">Pr&#xE9;paration CC2</a> </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                  <li>Message Passing Neural Networks</li>
+                  <li>Convolution spectrale via Laplacien</li>
+                  <li>GCN GraphSAGE GAT</li>
+                  <li>Node classification Link prediction</li>
+                  <li>Neighbor sampling et scalabilit&#xE9;</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI5</div>
+            <div class="chapter-title">Deep Reinforcement Learning</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/deep_rl.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/deep_rl&amp;wrap=true">Exercices</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                    <li>Apprentissage par Renforcement</li>
+                    <li>&#xC9;quation de Bellman</li>
+                    <li>Deep Q-Network</li>
+                    <li>Policy Gradient</li>
+                    <li>Actor-Critic</li>
+                    <li>Exploration et Exploitation</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI6</div>
+            <div class="chapter-title">XAI</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/xai.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/xai&amp;wrap=true">Exercices</a>
+                    </li>
+		    <li>
+<a class="all-in-one" href="?page=cours/cc3&amp;wrap=true">Pr&#xE9;paration CC3</a> </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+		<ul>
+		  <li>Bo&#xEE;te noire</li>
+		  <li>Explicabilit&#xE9; post-hoc</li>
+		  <li>Valeurs de Shapley</li>
+		  <li>Gradients int&#xE9;gr&#xE9;s</li>
+		  <li>Courant r&#xE9;siduel</li>
+		</ul>
+            </div>
+        </li>
+
+    </ul>
+</li>
+
+
+<!-- Local Variables: -->
+<!-- mode: web -->
+<!-- mode: flyspell -->
+<!-- ispell-dictionary: "french" -->
+<!-- coding: utf-8 -->
+<!-- End: -->
+</ul>
+
+<!-- Local Variables: -->
+<!-- mode: web -->
+<!-- mode: flyspell -->
+<!-- ispell-dictionary: "french" -->
+<!-- coding: utf-8 -->
+<!-- End: -->
+</div>				</div>
+				
+				<div class='navbar-search'>
+					<div class='dropdown-target fade-height' data-from='main-menu'>
+						<div class='dropdown-button d-none d-md-block' id='search'><i class='fas fa-search'></i></div>
+						<form role='search' 
+									class='search-menu dropdown-target fade-height' 
+									data-from='search'
+									action="/COURS/CSC8608/Supports/index.php">
+							<div>
+								<input type="text" name="s" placeholder="Search" aria-label="Search"/>
+								<button type='submit'><i class='fas fa-search'></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<div class='content cours'>
+  <div class="main" id="main-content">
+<div class="chapitre-container ">
+<h2 class="chapitre-toggle
+          toggle
+          " data-toggle-to="chapitre-idm45617486244176">CI : Modern Computer Vision</h2>
+<div class="chapitre-content " id="chapitre-idm45617486244176">
+	
+
+
+<p>
+  Dans ce TP, vous allez construire une mini-application de segmentation interactive d&#x2019;images &#xE0; l&#x2019;aide de <strong>SAM (Segment Anything Model)</strong>. L&#x2019;objectif est de vous placer dans une situation r&#xE9;aliste d&#x2019;ing&#xE9;nierie : int&#xE9;grer un mod&#xE8;le pr&#xE9;-entra&#xEE;n&#xE9;, g&#xE9;rer correctement l&#x2019;I/O image, proposer une interface minimale mais utilisable, et produire des sorties exploitables (visualisation + mesures simples) sans entra&#xEE;ner de mod&#xE8;le.
+</p>
+
+<p>
+  Le TP est volontairement pragmatique et &#x201C;production-minded&#x201D; : vous devrez faire attention &#xE0; la reproductibilit&#xE9;, &#xE0; la performance (GPU, cache), et &#xE0; la tra&#xE7;abilit&#xE9; (param&#xE8;tres, sorties, captures). Le code sera en grande partie fourni, mais vous devrez compl&#xE9;ter des zones marqu&#xE9;es <span class="code "><span class="code-container">_______</span></span> pour valider votre compr&#xE9;hension des &#xE9;tapes critiques (chargement mod&#xE8;le, format des coordonn&#xE9;es, post-traitement, mesures).
+</p>
+
+<div class="objectif">
+  <ul>
+    <li>Cr&#xE9;er un nouveau d&#xE9;p&#xF4;t Git et un dossier <span class="code "><span class="code-container">TP1/</span></span>, puis publier le d&#xE9;p&#xF4;t et transmettre le lien &#xE0; l&#x2019;enseignant.</li>
+    <li>Lancer une mini-UI accessible via SSH (port forwarding) pour segmenter une image &#xE0; partir d&#x2019;une bounding box.</li>
+    <li>Int&#xE9;grer SAM en inf&#xE9;rence sur GPU : chargement, cache, ex&#xE9;cution en mode <span class="code "><span class="code-container">inference</span></span>.</li>
+    <li>Produire une visualisation exploitable : image + bounding box + masque (overlay), et sauvegarder des r&#xE9;sultats l&#xE9;gers.</li>
+    <li>Calculer des mesures simples sur le masque (aire en pixels, bounding box du masque, p&#xE9;rim&#xE8;tre approximatif) et les afficher.</li>
+    <li>R&#xE9;diger un rapport en Markdown au fil du TP : captures d&#x2019;&#xE9;cran, commandes, courts commentaires et un paragraphe de r&#xE9;flexion (limites + pistes d&#x2019;industrialisation).</li>
+  </ul>
+</div>
+
+
+	<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617487159952">Initialisation du dépôt, réservation GPU, et lancement de la UI via SSH</h3>
+<div class="exercice-content " id="exercice-idm45617487159952">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486674608"></h4>
+<div class="question-content " id="question-idm45617486674608">
+    <p class="inline-paragraph">
+      Vous allez initialiser votre d&#xE9;p&#xF4;t Git et pr&#xE9;parer l&#x2019;environnement d&#x2019;ex&#xE9;cution. Le serveur dispose d&#xE9;j&#xE0; d&#x2019;un environnement conda avec PyTorch install&#xE9; :
+      <strong>r&#xE9;utilisez-le</strong>. Point important : <strong>r&#xE9;servez d&#x2019;abord une GPU via SLURM avant d&#x2019;installer des biblioth&#xE8;ques</strong>, afin d&#x2019;&#xE9;viter de bloquer le n&#x153;ud de connexion SLURM.
+    </p>
+<p></p>
+
+    <div class="remarque">
+      <p>
+        Ce TP est con&#xE7;u pour tourner sur un n&#x153;ud GPU r&#xE9;serv&#xE9; via SLURM (recommand&#xE9;). Il est possible de le faire en local (sur votre machine),
+        mais ce sera potentiellement tr&#xE8;s lent et/ou impossible sans GPU.
+      </p>
+    </div>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487638432"></h4>
+<div class="question-content " id="question-idm45617487638432">
+      <p class="inline-paragraph">
+        Cr&#xE9;ez un nouveau d&#xE9;p&#xF4;t Git (sur la plateforme habituelle) et cr&#xE9;ez le dossier <span class="code "><span class="code-container">TP1/</span></span> avec l&#x2019;arborescence minimale ci-dessous.
+        Faites-le soit directement sur votre machine (local), soit sur le serveur (recommand&#xE9; si vous d&#xE9;veloppez &#xE0; distance).
+      </p>
+<p></p>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+mkdir -p TP1/{data/images,src,outputs/overlays,outputs/logs,report}
+touch TP1/requirements.txt TP1/src/app.py TP1/src/sam_utils.py TP1/src/geom_utils.py TP1/src/viz_utils.py TP1/report/report.md TP1/README.md
+      </div></div>
+      <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486206736"></h4>
+<div class="question-content " id="question-idm45617486206736">
+        <p class="inline-paragraph">
+          Mettez &#xE0; jour votre rapport <span class="code "><span class="code-container">TP1/report/report.md</span></span> avec :
+        </p>
+<p></p>
+        <ul>
+          <li>le lien de votre d&#xE9;p&#xF4;t (ou un placeholder que vous remplacerez plus tard),</li>
+          <li>l&#x2019;endroit o&#xF9; vous ex&#xE9;cutez le TP (local ou n&#x153;ud GPU via SLURM),</li>
+          <li>l&#x2019;arborescence <span class="code "><span class="code-container">TP1/</span></span> (un simple aper&#xE7;u, pas besoin de copier toutes les commandes).</li>
+        </ul>
+      </div>
+</div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486970528"></h4>
+<div class="question-content " id="question-idm45617486970528">
+      <p class="inline-paragraph">
+        Sur le serveur, r&#xE9;servez une GPU via SLURM. Une fois sur le n&#x153;ud GPU, activez l&#x2019;environnement conda existant.
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          Vous ne devez <strong>pas</strong> installer de biblioth&#xE8;ques sur le n&#x153;ud de connexion. Faites-le uniquement apr&#xE8;s r&#xE9;servation et login sur le n&#x153;ud GPU.
+        </p>
+      </div>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# Exemple g&#xE9;n&#xE9;rique (adaptez &#xE0; votre cluster) :
+# salloc --gres=gpu:1 --time=01:30:00 --cpus-per-task=4 --mem=16G
+# ou
+# srun --gres=gpu:1 --time=01:30:00 --cpus-per-task=4 --mem=16G --pty bash
+
+# Activez ensuite l'environnement conda d&#xE9;j&#xE0; disponible (nom &#xE0; adapter)
+conda activate _______
+
+python -c "import torch; print('torch', torch.__version__); print('cuda_available', torch.cuda.is_available()); print('device_count', torch.cuda.device_count())"
+      </div></div>
+      <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486855360"></h4>
+<div class="question-content " id="question-idm45617486855360">
+        <p class="inline-paragraph">
+          Mettez &#xE0; jour votre rapport avec :
+        </p>
+<p></p>
+        <ul>
+          <li>le nom de l&#x2019;environnement conda activ&#xE9;,</li>
+          <li>une preuve que CUDA est disponible (ex : capture terminal ou une phrase avec les valeurs cl&#xE9;s).</li>
+        </ul>
+      </div>
+</div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487515696"></h4>
+<div class="question-content " id="question-idm45617487515696">
+      <p class="inline-paragraph">
+        Installez les d&#xE9;pendances <strong>sur la machine de calcul</strong> (le n&#x153;ud GPU).
+        Remplissez <span class="code "><span class="code-container">TP1/requirements.txt</span></span> avec les biblioth&#xE8;ques n&#xE9;cessaires au TP. Vous devez au minimum avoir : Streamlit, OpenCV, et SAM.
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          PyTorch est d&#xE9;j&#xE0; install&#xE9; dans l&#x2019;environnement conda. N&#x2019;ajoutez pas <span class="code "><span class="code-container">torch</span></span> dans <span class="code "><span class="code-container">requirements.txt</span></span>.
+        </p>
+      </div>
+      <div class="tip-container ">
+<div class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487522256"></div>
+<div class="tip-content " id="tip-idm45617487522256">
+        <p>
+          Si une installation &#xE9;choue &#xE0; cause du r&#xE9;seau, contactez l&#x2019;enseignant : il pourra fournir une alternative (miroir, wheel, ou autre m&#xE9;thode).
+        </p>
+      </div>
+</div>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# &#xC9;ditez requirements.txt (au minimum)
+cat &gt; TP1/requirements.txt &lt;&lt; 'EOF'
+streamlit
+opencv-python
+numpy
+matplotlib
+# SAM v1 (Segment Anything)
+git+https://github.com/facebookresearch/segment-anything.git
+EOF
+
+# Installation sur le n&#x153;ud GPU (dans l'environnement conda activ&#xE9;)
+pip install -r TP1/requirements.txt
+      </div></div>
+      <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487079136"></h4>
+<div class="question-content " id="question-idm45617487079136">
+        <p class="inline-paragraph">
+          Mettez &#xE0; jour votre rapport avec :
+        </p>
+<p></p>
+        <ul>
+          <li>une preuve que l&#x2019;import de <span class="code "><span class="code-container">segment_anything</span></span> fonctionne (capture terminal ou phrase courte).</li>
+        </ul>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python -c "import streamlit, cv2, numpy; print('ok'); import segment_anything; print('sam_ok')"
+      </div></div>
+      </div>
+</div>
+    </div>
+</div>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487501136"></h4>
+<div class="question-content " id="question-idm45617487501136">
+      <p class="inline-paragraph">
+        Pr&#xE9;parez l&#x2019;acc&#xE8;s &#xE0; la UI Streamlit via SSH. Vous devez choisir un port non utilis&#xE9; par les autres &#xE9;tudiants (ex : 8511, 8512, 8513&#x2026;).
+        Ensuite, lancez Streamlit sur le <strong>n&#x153;ud GPU</strong> en &#xE9;coutant sur <span class="code "><span class="code-container">0.0.0.0</span></span>.
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          Distinguez bien :
+          <strong>(1) lancer Streamlit sur le n&#x153;ud GPU</strong> (machine de calcul),
+          et <strong>(2) cr&#xE9;er le tunnel SSH depuis votre machine locale</strong> (votre PC).
+        </p>
+      </div>
+      <div class="tip-container ">
+<div class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487424480"></div>
+<div class="tip-content " id="tip-idm45617487424480">
+        <p>
+          Choisissez un port &#x201C;rare&#x201D; et notez-le quelque part : vous en aurez besoin dans les exercices suivants.
+        </p>
+      </div>
+</div>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# Sur le n&#x153;ud GPU (dans le dossier de votre repo)
+PORT=_______
+streamlit run TP1/src/app.py --server.port $PORT --server.address 0.0.0.0
+      </div></div>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# Sur votre machine locale (port forwarding SSH)
+ssh -L ${PORT}:localhost:${PORT} nodeX-tsp
+      </div></div>
+      <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487745088"></h4>
+<div class="question-content " id="question-idm45617487745088">
+        <p class="inline-paragraph">
+          Mettez &#xE0; jour votre rapport avec :
+        </p>
+<p></p>
+        <ul>
+          <li>le port choisi,</li>
+          <li>une capture d&#x2019;&#xE9;cran montrant Streamlit ouvert dans le navigateur (URL visible),</li>
+          <li>un court commentaire : &#x201C;UI accessible via SSH tunnel : oui/non&#x201D;.</li>
+        </ul>
+      </div>
+</div>
+    </div>
+</div>
+    
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617486666064">Constituer un mini-dataset (jusqu’à 20 images)</h3>
+<div class="exercice-content " id="exercice-idm45617486666064">
+    <p>
+      Vous allez constituer un petit jeu de donn&#xE9;es d&#x2019;images (<strong>maximum 20</strong>) pour tester votre application de segmentation.
+      L&#x2019;objectif est d&#x2019;avoir des images suffisamment vari&#xE9;es pour observer des comportements diff&#xE9;rents de SAM (cas faciles, cas ambigus, cas difficiles).
+    </p>
+
+    <div class="remarque">
+      <p>
+        Les images peuvent venir du web ou de vos photos personnelles. &#xC9;vitez tout contenu sensible ou identifiable si vous choisissez des photos personnelles
+        (par simplicit&#xE9; et pour limiter les risques li&#xE9;s &#xE0; l&#x2019;utilisation/partage de donn&#xE9;es).
+      </p>
+    </div>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487067872"></h4>
+<div class="question-content " id="question-idm45617487067872">
+      <p class="inline-paragraph">
+        R&#xE9;cup&#xE9;rez jusqu&#x2019;&#xE0; <strong>20 images</strong> et placez-les dans <span class="code "><span class="code-container">TP1/data/images/</span></span>.
+        Choisissez des images &#x201C;r&#xE9;elles&#x201D; (pas uniquement des objets d&#xE9;tour&#xE9;s sur fond blanc).
+      </p>
+<p></p>
+      <p>
+        Votre s&#xE9;lection doit inclure au minimum :
+      </p>
+      <ul>
+        <li>
+<strong>3 images &#x201C;simples&#x201D;</strong> : un objet principal bien visible, fond peu charg&#xE9; (ex : produit, outil, plante).</li>
+        <li>
+<strong>3 images &#x201C;charg&#xE9;es&#x201D;</strong> : plusieurs objets, fond complexe (ex : rue, magasin, cuisine, bureau).</li>
+        <li>
+<strong>2 images &#x201C;difficiles&#x201D;</strong> : occlusion, reflet, faible contraste, objet fin (ex : verre transparent, grillage, cheveux, c&#xE2;ble).</li>
+      </ul>
+      <div class="remarque">
+        <p>
+          Pour que le TP reste l&#xE9;ger : privil&#xE9;giez des images en <span class="code "><span class="code-container">.jpg</span></span> ou <span class="code "><span class="code-container">.png</span></span> de taille raisonnable (&#xE9;vitez les images 4K si possible).
+          Ne mettez pas de fichiers trop lourds dans le d&#xE9;p&#xF4;t ; vous utiliserez des captures d&#x2019;&#xE9;cran dans le rapport.
+        </p>
+      </div>
+      <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617486700240"></span><span class="tip-content " id="tip-idm45617486700240">Vous pouvez utiliser wget pour t&#xE9;l&#xE9;charger des images &#xE0; partir d'une URL</span></span>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# V&#xE9;rification rapide (sur la machine o&#xF9; se trouve le repo)
+ls -lah TP1/data/images | head
+
+# Optionnel : afficher le nombre d&#x2019;images
+python -c "import pathlib; p=pathlib.Path('TP1/data/images'); print('n_images=', len([x for x in p.iterdir() if x.suffix.lower() in ['.jpg','.jpeg','.png']]))"
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486772096"></h4>
+<div class="question-content " id="question-idm45617486772096">
+      <p class="inline-paragraph">
+        Mettez &#xE0; jour votre rapport avec :
+      </p>
+<p></p>
+      <ul>
+        <li>le nombre d&#x2019;images final,</li>
+        <li>une liste de <strong>5 images repr&#xE9;sentatives</strong> (nom de fichier + 1 phrase sur pourquoi elle est int&#xE9;ressante),</li>
+        <li>au moins <strong>2 captures d&#x2019;&#xE9;cran</strong> (ou vignettes) montrant un cas simple et un cas difficile.</li>
+      </ul>
+      <div class="remarque">
+        <p>
+          Ne copiez pas toutes les URL. Si vous avez utilis&#xE9; des images du web, vous pouvez simplement citer 1&#x2013;2 sources g&#xE9;n&#xE9;rales
+          ou indiquer &#x201C;images r&#xE9;cup&#xE9;r&#xE9;es via recherche web&#x201D; sans d&#xE9;tailler davantage.
+        </p>
+      </div>
+    </div>
+</div>
+    
+
+  
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617486302016">Charger SAM (GPU) et préparer une inférence “bounding box → masque”</h3>
+<div class="exercice-content " id="exercice-idm45617486302016">
+    <p>
+      Dans cet exercice, vous allez int&#xE9;grer <strong>SAM</strong> en inf&#xE9;rence GPU et impl&#xE9;menter une fonction centrale :
+      &#xE0; partir d&#x2019;une image et d&#x2019;une <strong>bounding box</strong>, produire un <strong>masque binaire</strong>.
+      Cette brique sera ensuite appel&#xE9;e par l&#x2019;interface Streamlit.
+    </p>
+
+    <div class="remarque">
+      <p>
+        Vous ex&#xE9;cuterez le code sur la <strong>machine de calcul</strong> (n&#x153;ud GPU SLURM recommand&#xE9;). En local, cela peut fonctionner,
+        mais l&#x2019;inf&#xE9;rence sera nettement plus lente, et certaines installations peuvent &#xEA;tre probl&#xE9;matiques.
+      </p>
+    </div>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487501744"></h4>
+<div class="question-content " id="question-idm45617487501744">
+      <p class="inline-paragraph">
+        T&#xE9;l&#xE9;chargez les poids SAM (checkpoint) sur la machine de calcul et placez-les dans un dossier <span class="code "><span class="code-container">TP1/models/</span></span>.
+        Vous devez cr&#xE9;er ce dossier et v&#xE9;rifier que le fichier est pr&#xE9;sent.
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          Ne commitez pas le checkpoint dans votre d&#xE9;p&#xF4;t : c&#x2019;est un gros fichier. Gardez-le uniquement sur la machine de calcul.
+        </p>
+      </div>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+mkdir -p TP1/models
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+# https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth = huge
+# https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth = large
+# https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth = base (si vous avez des probl&#xE8;mes de performance)
+mv *pth TP1/models
+# V&#xE9;rifiez ensuite :
+ls -lah TP1/models
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487582624"></h4>
+<div class="question-content " id="question-idm45617487582624">
+      <p class="inline-paragraph">
+        Compl&#xE9;tez <span class="code "><span class="code-container">TP1/src/sam_utils.py</span></span> pour charger SAM sur le bon device et cr&#xE9;er un <span class="code "><span class="code-container">SamPredictor</span></span>.
+        Les parties <span class="code "><span class="code-container">_______</span></span> doivent &#xEA;tre remplac&#xE9;es par du code correct.
+      </p>
+<p></p>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import numpy as np
+import torch
+from segment_anything import sam_model_registry, SamPredictor
+
+
+def get_device() -&gt; str:
+    """
+    Retourne 'cuda' si dispo, sinon 'cpu'.
+    """
+    return "cuda" if _______ else "cpu"
+
+
+@torch.inference_mode()
+def load_sam_predictor(checkpoint_path: str, model_type: str = "vit_h") -&gt; SamPredictor:
+    """
+    Charge SAM et retourne un SamPredictor pr&#xEA;t pour l'inf&#xE9;rence.
+    """
+    if not os.path.isfile(checkpoint_path):
+        raise FileNotFoundError(f"Checkpoint introuvable: {checkpoint_path}")
+
+    device = get_device()
+
+    sam = sam_model_registry[model_type](checkpoint=checkpoint_path)
+    sam.to(device=_______)
+    sam.eval()
+
+    predictor = SamPredictor(_______)
+    return predictor
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487738592"></h4>
+<div class="question-content " id="question-idm45617487738592">
+      <p class="inline-paragraph">
+        Impl&#xE9;mentez la fonction <span class="code "><span class="code-container">predict_mask_from_box</span></span> dans <span class="code "><span class="code-container">TP1/src/sam_utils.py</span></span>.
+        Elle prend une image RGB (numpy) et une bbox <span class="code "><span class="code-container">(x1,y1,x2,y2)</span></span> en pixels, et renvoie :
+        <strong>(mask_bool, score_float)</strong>.
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          On suppose que la bbox est d&#xE9;j&#xE0; dans le rep&#xE8;re de l&#x2019;image affich&#xE9;e (pixels).
+          Plus tard, l&#x2019;UI vous fournira ces coordonn&#xE9;es.
+        </p>
+      </div>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+@torch.inference_mode()
+def predict_mask_from_box(
+    predictor: SamPredictor,
+    image_rgb: np.ndarray,
+    box_xyxy: np.ndarray,
+    multimask: bool = True,
+):
+    """
+    image_rgb: (H,W,3) uint8 en RGB
+    box_xyxy: (4,) -&gt; [x1,y1,x2,y2] en pixels
+    retourne: (mask_bool(H,W), score_float)
+    """
+    if image_rgb.ndim != 3 or image_rgb.shape[2] != 3:
+        raise ValueError("image_rgb doit &#xEA;tre (H,W,3)")
+    if box_xyxy.shape != (4,):
+        raise ValueError("box_xyxy doit &#xEA;tre de shape (4,)")
+
+    predictor.set_image(image_rgb)
+
+    # SAM attend une box float32 de shape (1,4)
+    box = box_xyxy.astype(np.float32)[None, :]
+
+    masks, scores, _ = predictor.predict(
+        point_coords=None,
+        point_labels=None,
+        box=_______,
+        multimask_output=_______,
+    )
+
+    best_idx = int(np.argmax(scores))
+    mask = masks[best_idx].astype(bool)
+    score = float(scores[best_idx])
+    return mask, score
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487526528"></h4>
+<div class="question-content " id="question-idm45617487526528">
+      <p class="inline-paragraph">
+        Testez rapidement votre fonction avec une image de <span class="code "><span class="code-container">TP1/data/images/</span></span> et une bbox &#x201C;&#xE0; la main&#x201D; (valeurs num&#xE9;riques),
+        sur la machine de calcul. L&#x2019;objectif est juste de v&#xE9;rifier que :
+      </p>
+<p></p>
+      <ul>
+        <li>le mod&#xE8;le se charge sur GPU (si dispo),</li>
+        <li>la fonction renvoie bien un masque de taille <span class="code "><span class="code-container">(H,W)</span></span>,</li>
+        <li>le score est un float raisonnable.</li>
+      </ul>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# TP1/src/quick_test_sam.py (&#xE0; cr&#xE9;er) ou ex&#xE9;cuter dans un python interactif
+import numpy as np
+import cv2
+from pathlib import Path
+from sam_utils import load_sam_predictor, predict_mask_from_box
+
+img_path = next(Path("TP1/data/images").glob("*.jpg"))  # adaptez si besoin
+bgr = cv2.imread(str(img_path), cv2.IMREAD_COLOR)
+rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+
+ckpt = "TP1/models/_______"  # nom du fichier .pth
+pred = load_sam_predictor(ckpt, model_type="vit_h") # Attention, ou vit_l ou vit_b
+
+# bbox "&#xE0; la main" (exemple) : adaptez &#xE0; votre image
+box = np.array([50, 50, 250, 250], dtype=np.int32)
+
+mask, score = predict_mask_from_box(pred, rgb, box, multimask=True)
+print("img", rgb.shape, "mask", mask.shape, "score", score, "mask_sum", mask.sum())
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487447696"></h4>
+<div class="question-content " id="question-idm45617487447696">
+      <p class="inline-paragraph">
+        Mettez &#xE0; jour votre rapport avec :
+      </p>
+<p></p>
+      <ul>
+        <li>le mod&#xE8;le choisi (<span class="code "><span class="code-container">vit_h</span></span> par exemple) et le nom du checkpoint utilis&#xE9; (sans l&#x2019;ajouter au d&#xE9;p&#xF4;t),</li>
+        <li>une capture du test rapide (sortie console) montrant la shape de l&#x2019;image, du masque, et le score,</li>
+        <li>un court commentaire (3&#x2013;5 lignes) sur un premier constat : &#x201C;&#xE7;a marche / c&#x2019;est lent / limites observ&#xE9;es&#x201D;.</li>
+      </ul>
+    </div>
+</div>
+    
+
+  
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617487554256">Mesures et visualisation : overlay + métriques (aire, bbox, périmètre)</h3>
+<div class="exercice-content " id="exercice-idm45617487554256">
+    <p>
+      Vous allez maintenant produire des sorties &#x201C;exploitables&#x201D; : une visualisation claire (image + bbox + masque en overlay)
+      et des m&#xE9;triques simples calcul&#xE9;es &#xE0; partir du masque. Ces &#xE9;l&#xE9;ments seront affich&#xE9;s dans l&#x2019;UI et sauvegard&#xE9;s sous forme de fichiers l&#xE9;gers.
+    </p>
+
+    <div class="remarque">
+      <p>
+        Objectif ing&#xE9;nierie : s&#xE9;parer proprement les responsabilit&#xE9;s (g&#xE9;om&#xE9;trie vs visualisation) et &#xE9;viter les d&#xE9;pendances inutiles.
+        Les fonctions de cet exercice devront &#xEA;tre appel&#xE9;es par l&#x2019;UI &#xE0; l&#x2019;exercice suivant.
+      </p>
+    </div>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486803664"></h4>
+<div class="question-content " id="question-idm45617486803664">
+      <p class="inline-paragraph">
+        Compl&#xE9;tez <span class="code "><span class="code-container">TP1/src/geom_utils.py</span></span> pour calculer :
+        <strong>(1) aire en pixels</strong>, <strong>(2) bbox du masque</strong>, <strong>(3) p&#xE9;rim&#xE8;tre approximatif</strong>.
+        Remplacez uniquement les <span class="code "><span class="code-container">_______</span></span>.
+      </p>
+<p></p>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import numpy as np
+import cv2
+
+
+def mask_area(mask: np.ndarray) -&gt; int:
+    """
+    Aire en pixels (nombre de pixels True).
+    """
+    return int(_______)
+
+
+def mask_bbox(mask: np.ndarray):
+    """
+    BBox serr&#xE9;e du masque : (x1, y1, x2, y2).
+    Si masque vide, retourner None.
+    """
+    if mask is None or mask.size == 0 or not mask.any():
+        return None
+
+    ys, xs = np.where(mask)
+    x1, x2 = int(xs.min()), int(xs.max())
+    y1, y2 = int(ys.min()), int(ys.max())
+    return x1, y1, x2, y2
+
+
+def mask_perimeter(mask: np.ndarray) -&gt; float:
+    """
+    P&#xE9;rim&#xE8;tre approximatif via extraction de contours OpenCV.
+    Si masque vide, retourner 0.0.
+    """
+    if mask is None or mask.size == 0 or not mask.any():
+        return 0.0
+
+    m = (mask.astype(np.uint8) * 255)
+    contours, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    per = float(sum(cv2.arcLength(c, closed=True) for c in _______))
+    return per
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487384096"></h4>
+<div class="question-content " id="question-idm45617487384096">
+      <p class="inline-paragraph">
+        Compl&#xE9;tez <span class="code "><span class="code-container">TP1/src/viz_utils.py</span></span> pour g&#xE9;n&#xE9;rer un overlay lisible.
+        La fonction doit :
+      </p>
+<p></p>
+      <ul>
+        <li>prendre une image RGB (<span class="code "><span class="code-container">uint8</span></span>), un masque bool&#xE9;en, et une bbox,</li>
+        <li>dessiner la bbox,</li>
+        <li>superposer le masque avec transparence (alpha),</li>
+        <li>retourner une image RGB (<span class="code "><span class="code-container">uint8</span></span>).</li>
+      </ul>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import numpy as np
+import cv2
+
+
+def render_overlay(
+    image_rgb: np.ndarray,
+    mask: np.ndarray,
+    box_xyxy: np.ndarray,
+    alpha: float = 0.5,
+):
+    """
+    Retourne une image RGB uint8 avec :
+    - bbox dessin&#xE9;e
+    - masque superpos&#xE9; (alpha blending)
+    """
+    out = image_rgb.copy()
+
+    # 1) Dessiner bbox (en RGB, mais OpenCV dessine en BGR : on dessine sur une version BGR)
+    bgr = cv2.cvtColor(out, cv2.COLOR_RGB2BGR)
+    x1, y1, x2, y2 = [int(v) for v in box_xyxy.tolist()]
+    cv2.rectangle(bgr, (x1, y1), (x2, y2), color=(0, 255, 0), thickness=2)
+    out = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+
+    # 2) Alpha blending du masque (utiliser une couleur fixe, par ex. rouge)
+    if mask is not None and mask.any():
+        overlay = out.copy()
+        overlay[mask] = (255, 0, 0)  # RGB rouge
+        out = (_______ * overlay + (1.0 - _______) * out).astype(np.uint8)
+
+    return out
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486366944"></h4>
+<div class="question-content " id="question-idm45617486366944">
+      <p class="inline-paragraph">
+        Faites un test rapide (hors UI) : chargez une image, d&#xE9;finissez une bbox &#x201C;&#xE0; la main&#x201D;, ex&#xE9;cutez SAM, calculez les m&#xE9;triques,
+        g&#xE9;n&#xE9;rez l&#x2019;overlay, puis sauvegardez-le dans <span class="code "><span class="code-container">TP1/outputs/overlays/</span></span>.
+      </p>
+<p></p>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# TP1/src/quick_test_overlay.py (&#xE0; cr&#xE9;er) ou ex&#xE9;cuter dans un python interactif
+import numpy as np
+import cv2
+from pathlib import Path
+
+from sam_utils import load_sam_predictor, predict_mask_from_box
+from geom_utils import mask_area, mask_bbox, mask_perimeter
+from viz_utils import render_overlay
+
+img_path = next(Path("TP1/data/images").glob("*.jpg"))  # adaptez si besoin
+bgr = cv2.imread(str(img_path), cv2.IMREAD_COLOR)
+rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+
+ckpt = "TP1/models/_______"
+pred = load_sam_predictor(ckpt, model_type="vit_h")
+
+box = np.array([50, 50, 250, 250], dtype=np.int32)  # adaptez
+mask, score = predict_mask_from_box(pred, rgb, box, multimask=True)
+
+m_area = mask_area(mask)
+m_bbox = mask_bbox(mask)
+m_per = mask_perimeter(mask)
+
+overlay = render_overlay(rgb, mask, box, alpha=0.5)
+
+out_dir = Path("TP1/outputs/overlays")
+out_dir.mkdir(parents=True, exist_ok=True)
+out_path = out_dir / f"overlay_{img_path.stem}.png"
+
+# Sauvegarde via OpenCV (BGR)
+cv2.imwrite(str(out_path), cv2.cvtColor(overlay, cv2.COLOR_RGB2BGR))
+
+print("score", score, "area", m_area, "bbox", m_bbox, "perimeter", m_per)
+print("saved:", out_path)
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486671424"></h4>
+<div class="question-content " id="question-idm45617486671424">
+      <p class="inline-paragraph">
+        Mettez &#xE0; jour votre rapport avec :
+      </p>
+<p></p>
+      <ul>
+        <li>une capture d&#x2019;&#xE9;cran (ou vignette) d&#x2019;un overlay produit,</li>
+        <li>un mini-tableau (3 lignes) r&#xE9;capitulant <strong>image</strong> &#x2192; <strong>score</strong> &#x2192; <strong>aire</strong> &#x2192; <strong>p&#xE9;rim&#xE8;tre</strong> pour 3 images,</li>
+        <li>un commentaire bref (5&#x2013;8 lignes) : dans quels cas l&#x2019;overlay aide &#xE0; &#x201C;debugger&#x201D; le mod&#xE8;le/prompt ?</li>
+      </ul>
+    </div>
+</div>
+    
+
+  
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617487604432">Mini-UI Streamlit : sélection d’image, saisie de bbox, segmentation, affichage et sauvegarde</h3>
+<div class="exercice-content " id="exercice-idm45617487604432">
+    <p>
+      Vous allez maintenant assembler les briques pr&#xE9;c&#xE9;dentes dans une mini-UI Streamlit. L&#x2019;application doit permettre :
+      s&#xE9;lectionner une image, d&#xE9;finir une bounding box, lancer la segmentation, visualiser le r&#xE9;sultat (overlay + m&#xE9;triques),
+      et sauvegarder un overlay l&#xE9;ger.
+    </p>
+
+    <div class="remarque">
+      <p>
+        Pour rester simple et robuste, on vous demande une saisie de bbox via <strong>4 sliders</strong> (x1, y1, x2, y2).
+        Ce n&#x2019;est pas le plus ergonomique, mais cela &#xE9;vite des d&#xE9;pendances UI suppl&#xE9;mentaires et fonctionne bien via SSH.
+      </p>
+    </div>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487579856"></h4>
+<div class="question-content " id="question-idm45617487579856">
+      <p class="inline-paragraph">
+        Compl&#xE9;tez <span class="code "><span class="code-container">TP1/src/app.py</span></span> pour :
+      </p>
+<p></p>
+      <ul>
+        <li>charger et cacher le predictor SAM (charg&#xE9; une seule fois),</li>
+        <li>lister les images disponibles dans <span class="code "><span class="code-container">TP1/data/images/</span></span>,</li>
+        <li>afficher l&#x2019;image s&#xE9;lectionn&#xE9;e,</li>
+        <li>proposer 4 sliders pour la bbox, born&#xE9;s par la taille de l&#x2019;image,</li>
+        <li>lancer la segmentation au clic sur un bouton,</li>
+        <li>afficher overlay + m&#xE9;triques,</li>
+        <li>permettre la sauvegarde d&#x2019;un overlay dans <span class="code "><span class="code-container">TP1/outputs/overlays/</span></span>.</li>
+      </ul>
+
+      <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import time
+from pathlib import Path
+
+import cv2
+import numpy as np
+import streamlit as st
+
+from sam_utils import load_sam_predictor, predict_mask_from_box
+from geom_utils import mask_area, mask_bbox, mask_perimeter
+from viz_utils import render_overlay
+
+
+DATA_DIR = Path("TP1/data/images")
+OUT_DIR = Path("TP1/outputs/overlays")
+CKPT_PATH = "TP1/models/_______"   # &#xE0; adapter
+MODEL_TYPE = "vit_h"
+
+
+def load_image_rgb(path: Path) -&gt; np.ndarray:
+    bgr = cv2.imread(str(path), cv2.IMREAD_COLOR)
+    if bgr is None:
+        raise ValueError(f"Image illisible: {path}")
+    rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+    return rgb
+
+
+@st.cache_resource
+def get_predictor():
+    # Chargement unique : important pour &#xE9;viter de recharger SAM &#xE0; chaque interaction UI
+    return load_sam_predictor(_______, model_type=_______)
+
+
+st.set_page_config(page_title="TP1 - SAM Segmentation", layout="wide")
+st.title("TP1 &#x2014; Segmentation interactive (SAM)")
+
+# 1) Liste d'images
+imgs = sorted([p for p in DATA_DIR.iterdir() if p.suffix.lower() in [".jpg", ".jpeg", ".png"]])
+if len(imgs) == 0:
+    st.error("Aucune image trouv&#xE9;e dans TP1/data/images/")
+    st.stop()
+
+img_name = st.selectbox("Choisir une image", [p.name for p in imgs])
+img_path = DATA_DIR / img_name
+img = load_image_rgb(img_path)
+H, W = img.shape[:2]
+
+# 2) Affichage image
+st.image(img, caption=f"{img_name} ({W}x{H})", use_container_width=True)
+
+# 3) Sliders bbox (born&#xE9;s)
+st.subheader("Bounding box (pixels)")
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    x1 = st.slider("x1", 0, W - 1, 0)
+with col2:
+    y1 = st.slider("y1", 0, H - 1, 0)
+with col3:
+    x2 = st.slider("x2", 0, W - 1, W - 1)
+with col4:
+    y2 = st.slider("y2", 0, H - 1, H - 1)
+
+# Normaliser bbox (x1&lt;x2, y1&lt;y2)
+x_min, x_max = (x1, x2) if x1 &lt; x2 else (x2, x1)
+y_min, y_max = (y1, y2) if y1 &lt; y2 else (y2, y1)
+box = np.array([x_min, y_min, x_max, y_max], dtype=np.int32)
+
+# 4) Segmentation
+do_segment = st.button("Segmenter")
+if do_segment:
+    predictor = get_predictor()
+
+    t0 = time.time()
+    mask, score = predict_mask_from_box(predictor, img, box, multimask=True)
+    dt = (time.time() - t0) * 1000.0
+
+    overlay = render_overlay(img, mask, box, alpha=0.5)
+
+    m_area = mask_area(mask)
+    m_bbox = mask_bbox(mask)
+    m_per = mask_perimeter(mask)
+
+    st.subheader("R&#xE9;sultat")
+    st.image(overlay, caption=f"score={score:.3f} | time={dt:.1f} ms", use_container_width=True)
+
+    st.write({
+        "score": float(score),
+        "time_ms": float(dt),
+        "area_px": int(m_area),
+        "mask_bbox": m_bbox,
+        "perimeter": float(m_per),
+    })
+
+    # 5) Sauvegarde overlay
+    save = st.button("Sauvegarder overlay")
+    if save:
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        out_path = OUT_DIR / f"overlay_{img_path.stem}.png"
+        cv2.imwrite(str(out_path), cv2.cvtColor(overlay, cv2.COLOR_RGB2BGR))
+        st.success(f"Sauvegard&#xE9;: {out_path}")
+      </div></div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486551440"></h4>
+<div class="question-content " id="question-idm45617486551440">
+      <p class="inline-paragraph">
+        Lancez l&#x2019;application Streamlit sur la machine de calcul, puis acc&#xE9;dez-y depuis votre navigateur via SSH port forwarding.
+        Testez sur au moins <strong>3 images</strong> avec des bboxes diff&#xE9;rentes.
+      </p>
+<p></p>
+      <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# Sur la machine de calcul
+PORT=_______
+streamlit run TP1/src/app.py --server.port $PORT --server.address 0.0.0.0
+      </div></div>
+      <div class="remarque">
+        <p>
+          Si Streamlit est d&#xE9;j&#xE0; lanc&#xE9;, ne relancez pas sur le m&#xEA;me port. Utilisez un nouveau port ou stoppez proprement l&#x2019;ancien process.
+        </p>
+      </div>
+    </div>
+</div>
+    
+
+<div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487324032"></h4>
+<div class="question-content " id="question-idm45617487324032">
+  <p class="inline-paragraph">
+    Am&#xE9;liorez l&#x2019;exp&#xE9;rience utilisateur en affichant <strong>en live</strong> la bounding box sur l&#x2019;image <strong>avant</strong> de lancer la segmentation.
+    L&#x2019;objectif est que l&#x2019;utilisateur voie imm&#xE9;diatement la zone qui sera segment&#xE9;e.
+  </p>
+<p></p>
+  <div class="remarque">
+    <p>
+      On ne vous demande pas de rendre la bbox &#x201C;cliquable&#x201D; &#xE0; la souris : une pr&#xE9;visualisation avec les sliders suffit.
+    </p>
+  </div>
+  <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py, apr&#xE8;s le calcul de `box`
+# Ajouter une pr&#xE9;visualisation bbox-only
+
+def draw_box_preview(image_rgb: np.ndarray, box_xyxy: np.ndarray) -&gt; np.ndarray:
+    preview = image_rgb.copy()
+    bgr = cv2.cvtColor(preview, cv2.COLOR_RGB2BGR)
+    x1, y1, x2, y2 = [int(v) for v in box_xyxy.tolist()]
+    cv2.rectangle(bgr, (x1, y1), (x2, y2), color=(0, 255, 0), thickness=2)
+    preview = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+    return preview
+
+preview = draw_box_preview(img, box)
+st.image(preview, caption="Pr&#xE9;visualisation : bbox (avant segmentation)", use_container_width=True)
+
+# Bonus simple : avertissement bbox tr&#xE8;s petite
+if (x_max - x_min) &lt; _______ or (y_max - y_min) &lt; _______:
+    st.warning("BBox tr&#xE8;s petite : essayez une bbox plus large.")
+  </div></div>
+</div>
+</div>
+
+
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487238464"></h4>
+<div class="question-content " id="question-idm45617487238464">
+      <p class="inline-paragraph">
+        Mettez &#xE0; jour votre rapport avec :
+      </p>
+<p></p>
+      <ul>
+        <li>2&#x2013;3 captures d&#x2019;&#xE9;cran de l&#x2019;UI montrant des r&#xE9;sultats (un cas simple et un cas difficile),</li>
+        <li>un tableau (ou liste) de 3 tests : image + bbox (valeurs) + score + aire + temps ms,</li>
+        <li>un court paragraphe &#x201C;debug&#x201D; : qu&#x2019;est-ce qui change quand vous agrandissez/r&#xE9;tr&#xE9;cissez la bbox ?</li>
+      </ul>
+    </div>
+</div>
+    
+
+  
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617490657152">Affiner la sélection de l'objet : points FG/BG + choix du masque (multimask)</h3>
+<div class="exercice-content " id="exercice-idm45617490657152">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617490656752"></h4>
+<div class="question-content " id="question-idm45617490656752">
+    <p class="inline-paragraph">
+      Avec une simple bounding box, SAM peut produire un masque &#x201C;plausible&#x201D; mais pas forc&#xE9;ment celui de l&#x2019;objet que vous visez
+      (cas typique : plusieurs objets dans la bbox, fond complexe, objet fin). Dans cet exercice, vous allez ajouter deux m&#xE9;canismes
+      simples et tr&#xE8;s efficaces pour mieux contr&#xF4;ler l&#x2019;objet segment&#xE9; :
+    </p>
+<p></p>
+    <ul>
+      <li>
+<strong>Points de guidage</strong> : points <em>foreground</em> (FG) et <em>background</em> (BG) en plus de la bbox.</li>
+      <li>
+<strong>Multimask + s&#xE9;lection</strong> : SAM peut produire plusieurs masques candidats ; vous permettrez &#xE0; l&#x2019;utilisateur de choisir.</li>
+    </ul>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487633568"></h4>
+<div class="question-content " id="question-idm45617487633568">
+    <p class="inline-paragraph">
+      Compl&#xE9;tez <span class="code "><span class="code-container">TP1/src/sam_utils.py</span></span> en ajoutant une fonction qui supporte <strong>bbox + points FG/BG</strong> et qui renvoie
+      <strong>tous les masques candidats</strong> (multimask) + leurs scores. Remplacez uniquement les <span class="code "><span class="code-container">_______</span></span>.
+    </p>
+<p></p>
+
+    <div class="remarque">
+      <p>
+        Format attendu par SAM :
+        <span class="code "><span class="code-container">point_coords</span></span> : array float32 de shape <span class="code "><span class="code-container">(N,2)</span></span> avec coordonn&#xE9;es pixels <span class="code "><span class="code-container">(x,y)</span></span>.
+        <span class="code "><span class="code-container">point_labels</span></span> : array int64 de shape <span class="code "><span class="code-container">(N,)</span></span> avec <span class="code "><span class="code-container">1</span></span> pour FG et <span class="code "><span class="code-container">0</span></span> pour BG.
+      </p>
+    </div>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import numpy as np
+import torch
+from segment_anything import SamPredictor
+
+@torch.inference_mode()
+def predict_masks_from_box_and_points(
+    predictor: SamPredictor,
+    image_rgb: np.ndarray,
+    box_xyxy: np.ndarray,
+    point_coords: np.ndarray | None,
+    point_labels: np.ndarray | None,
+    multimask: bool = True,
+):
+    """
+    Retourne (masks, scores) o&#xF9; :
+      - masks : (K, H, W) bool
+      - scores : (K,) float
+    """
+    predictor.set_image(image_rgb)
+
+    box = box_xyxy.astype(np.float32)[None, :]
+
+    if point_coords is not None:
+        pc = point_coords.astype(np.float32)
+        pl = point_labels.astype(np.int64)
+    else:
+        pc, pl = None, None
+
+    masks, scores, _ = predictor.predict(
+        point_coords=_______,
+        point_labels=_______,
+        box=box,
+        multimask_output=_______,
+    )
+
+    return masks.astype(bool), scores.astype(float)
+    </div></div>
+  </div>
+</div>
+  
+
+<div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487751392"></h4>
+<div class="question-content " id="question-idm45617487751392">
+  <p class="inline-paragraph">
+    Dans <span class="code "><span class="code-container">TP1/src/app.py</span></span>, vous allez int&#xE9;grer les points FG/BG et la s&#xE9;lection multimask <strong>sans casser</strong> le flux actuel
+    (s&#xE9;lection d&#x2019;image &#x2192; sliders bbox &#x2192; pr&#xE9;visualisation &#x2192; bouton Segmenter &#x2192; affichage overlay).
+    Pour &#xE9;viter les ambigu&#xEF;t&#xE9;s, suivez l&#x2019;ordre ci-dessous et ins&#xE9;rez le code <strong>aux endroits indiqu&#xE9;s</strong>.
+  </p>
+<p></p>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486836112"></h4>
+<div class="question-content " id="question-idm45617486836112">
+    <p class="inline-paragraph">
+      <strong>&#xC9;tape 1 &#x2014; Imports</strong> : en haut de <span class="code "><span class="code-container">TP1/src/app.py</span></span>, ajoutez l&#x2019;import de la nouvelle fonction
+      <span class="code "><span class="code-container">predict_masks_from_box_and_points</span></span>.
+    </p>
+<p></p>
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py (en haut, avec les autres imports)
+from sam_utils import predict_masks_from_box_and_points
+    </div></div>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487799840"></h4>
+<div class="question-content " id="question-idm45617487799840">
+    <p class="inline-paragraph">
+      <strong>&#xC9;tape 2 &#x2014; Session state</strong> : juste apr&#xE8;s <span class="code "><span class="code-container">st.title(...)</span></span> (d&#xE9;but de l&#x2019;UI), initialisez
+      deux cl&#xE9;s dans <span class="code "><span class="code-container">st.session_state</span></span> :
+      <span class="code "><span class="code-container">points</span></span> et <span class="code "><span class="code-container">last_pred</span></span>.
+    </p>
+<p></p>
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py, juste apr&#xE8;s st.title(...)
+if "points" not in st.session_state:
+    st.session_state["points"] = []  # liste de tuples (x, y, label) label: 1=FG, 0=BG
+
+if "last_pred" not in st.session_state:
+    st.session_state["last_pred"] = None  # dict ou None
+    </div></div>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617490655360"></h4>
+<div class="question-content " id="question-idm45617490655360">
+    <p class="inline-paragraph">
+      <strong>&#xC9;tape 3 &#x2014; Bloc UI &#x201C;Guidage points&#x201D;</strong> : apr&#xE8;s le bloc des sliders bbox (donc apr&#xE8;s la construction de
+      <span class="code "><span class="code-container">box = np.array([...])</span></span>), ajoutez une section UI pour :
+      (a) ajouter un point, (b) r&#xE9;initialiser les points, (c) afficher la liste des points courants.
+    </p>
+<p></p>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py, juste apr&#xE8;s la construction de `box`
+
+st.subheader("Guidage (optionnel) : points FG/BG")
+
+# UI de saisie d'un point
+c1, c2, c3 = st.columns(3)
+with c1:
+    px = st.slider("point x", 0, W - 1, int(W * 0.5))
+with c2:
+    py = st.slider("point y", 0, H - 1, int(H * 0.5))
+with c3:
+    ptype = st.selectbox("type", ["FG (objet)", "BG (fond)"])
+
+# Boutons
+if st.button("Ajouter point"):
+    label = 1 if ptype.startswith("FG") else 0
+    st.session_state["points"].append((int(px), int(py), int(label)))
+
+if st.button("R&#xE9;initialiser points"):
+    st.session_state["points"] = []
+
+# Affichage de l'&#xE9;tat courant (utile pour debug)
+st.write({
+    "n_points": len(st.session_state["points"]),
+    "points": st.session_state["points"],
+})
+    </div></div>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486985808"></h4>
+<div class="question-content " id="question-idm45617486985808">
+    <p class="inline-paragraph">
+      <strong>&#xC9;tape 4 &#x2014; Pr&#xE9;visualisation bbox + points</strong> : remplacez (ou compl&#xE9;tez) la pr&#xE9;visualisation existante de bbox
+      par une pr&#xE9;visualisation qui dessine <strong>bbox + points</strong>.
+      &#xC0; int&#xE9;grer au m&#xEA;me endroit que votre preview bbox actuel (avant d&#x2019;appuyer sur &#x201C;Segmenter&#x201D;).
+    </p>
+<p></p>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py, &#xE0; l'endroit o&#xF9; vous affichez d&#xE9;j&#xE0; la pr&#xE9;visualisation bbox
+
+def draw_preview(image_rgb: np.ndarray, box_xyxy: np.ndarray, points):
+    preview = image_rgb.copy()
+    bgr = cv2.cvtColor(preview, cv2.COLOR_RGB2BGR)
+
+    x1, y1, x2, y2 = [int(v) for v in box_xyxy.tolist()]
+    cv2.rectangle(bgr, (x1, y1), (x2, y2), color=(0, 255, 0), thickness=2)
+
+    for (x, y, lab) in points:
+        # FG = vert, BG = rouge
+        color = (0, 255, 0) if lab == 1 else (0, 0, 255)
+        cv2.circle(bgr, (int(x), int(y)), radius=6, color=color, thickness=-1)
+
+    return cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+
+preview = draw_preview(img, box, st.session_state["points"])
+st.image(preview, caption="Pr&#xE9;visualisation : bbox + points (avant segmentation)", use_container_width=True)
+    </div></div>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487174304"></h4>
+<div class="question-content " id="question-idm45617487174304">
+    <p class="inline-paragraph">
+      <strong>&#xC9;tape 5 &#x2014; Bouton de segmentation</strong> : dans le bloc o&#xF9; vous aviez
+      <span class="code "><span class="code-container">if do_segment:</span></span> (ou votre bouton &#x201C;Segmenter&#x201D;), remplacez l&#x2019;appel
+      <span class="code "><span class="code-container">predict_mask_from_box</span></span> par un appel &#xE0;
+      <span class="code "><span class="code-container">predict_masks_from_box_and_points</span></span> en rempla&#xE7;ant tout le code dans le if, puis stockez les r&#xE9;sultats dans
+      <span class="code "><span class="code-container">st.session_state["last_pred"]</span></span>.
+    </p>
+<p></p>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py, remplacer l'int&#xE9;rieur du bloc du bouton de segmentation
+
+predictor = get_predictor()
+
+pts = st.session_state["points"]
+if len(pts) &gt; 0:
+    point_coords = np.array([(x, y) for (x, y, _) in pts], dtype=np.float32)
+    point_labels = np.array([lab for (_, _, lab) in pts], dtype=np.int64)
+else:
+    point_coords, point_labels = None, None
+
+t0 = time.time()
+masks, scores = predict_masks_from_box_and_points(
+    predictor=predictor,
+    image_rgb=img,
+    box_xyxy=box,
+    point_coords=point_coords,
+    point_labels=point_labels,
+    multimask=True,
+)
+dt = (time.time() - t0) * 1000.0
+
+st.session_state["last_pred"] = {
+    "img_name": img_name,
+    "box": box.copy(),
+    "points": list(pts),
+    "masks": masks,
+    "scores": scores,
+    "time_ms": float(dt),
+}
+    </div></div>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486728736"></h4>
+<div class="question-content " id="question-idm45617486728736">
+    <p class="inline-paragraph">
+      <strong>&#xC9;tape 6 &#x2014; S&#xE9;lection du masque candidat + affichage</strong> : juste apr&#xE8;s le bloc de segmentation (ou en fin de page),
+      ajoutez un bloc qui :
+    </p>
+<p></p>
+    <ul>
+      <li>lit <span class="code "><span class="code-container">st.session_state["last_pred"]</span></span>,</li>
+      <li>si la pr&#xE9;diction correspond &#xE0; l&#x2019;image courante, propose un <span class="code "><span class="code-container">selectbox</span></span> d&#x2019;index,</li>
+      <li>affiche l&#x2019;overlay et les m&#xE9;triques pour le masque s&#xE9;lectionn&#xE9;,</li>
+      <li>permet la sauvegarde de l&#x2019;overlay (comme avant).</li>
+    </ul>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Dans TP1/src/app.py, apr&#xE8;s le bloc de segmentation (en dehors du if du bouton)
+
+lp = st.session_state["last_pred"]
+if lp is not None and lp["img_name"] == img_name:
+    masks = lp["masks"]
+    scores = lp["scores"]
+
+    st.subheader("Choix du masque candidat (multimask)")
+    st.write({"scores": [float(s) for s in scores.tolist()], "time_ms": lp.get("time_ms")})
+
+    default_idx = int(np.argmax(scores))
+    idx = st.selectbox("index du masque", list(range(len(scores))), index=default_idx)
+
+    mask = masks[int(idx)].astype(bool)
+    overlay = render_overlay(img, mask, box, alpha=0.5)
+
+    # m&#xE9;triques sur le masque choisi
+    m_area = mask_area(mask)
+    m_bbox = mask_bbox(mask)
+    m_per = mask_perimeter(mask)
+
+    st.image(overlay, caption=f"mask_idx={idx} | score={float(scores[idx]):.3f}", use_container_width=True)
+    st.write({
+        "mask_idx": int(idx),
+        "score": float(scores[idx]),
+        "area_px": int(m_area),
+        "mask_bbox": m_bbox,
+        "perimeter": float(m_per),
+    })
+
+    if st.button("Sauvegarder overlay (masque s&#xE9;lectionn&#xE9;)"):
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        out_path = OUT_DIR / f"overlay_{img_path.stem}_m{int(idx)}.png"
+        cv2.imwrite(str(out_path), cv2.cvtColor(overlay, cv2.COLOR_RGB2BGR))
+        st.success(f"Sauvegard&#xE9;: {out_path}")
+    </div></div>
+  </div>
+</div>
+  
+
+</div>
+</div>
+
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486335200"></h4>
+<div class="question-content " id="question-idm45617486335200">
+    <p class="inline-paragraph">
+      Testez sur au moins <strong>2 images difficiles</strong> o&#xF9; la bbox contient plusieurs &#xE9;l&#xE9;ments (ou un fond complexe).
+      Pour chaque image, faites :
+    </p>
+<p></p>
+    <ul>
+      <li>un essai &#x201C;bbox seule&#x201D; (sans points) ; notez si le masque correspond &#xE0; l&#x2019;objet voulu,</li>
+      <li>un essai &#x201C;bbox + 1 point FG&#x201D; (sur l&#x2019;objet voulu),</li>
+      <li>si n&#xE9;cessaire, ajoutez <strong>1 point BG</strong> sur une zone &#xE0; exclure (fond ou autre objet),</li>
+      <li>comparez les <strong>masques candidats</strong> (multimask) et choisissez le meilleur via l&#x2019;UI.</li>
+    </ul>
+
+    <div class="tip-container ">
+<div class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487266272"></div>
+<div class="tip-content " id="tip-idm45617487266272">
+      <p>
+        Commencez souvent par 1 point FG &#x201C;au centre&#x201D; de l&#x2019;objet, puis ajoutez 1 point BG sur l&#x2019;erreur la plus g&#xEA;nante.
+      </p>
+    </div>
+</div>
+  </div>
+</div>
+  
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486299360"></h4>
+<div class="question-content " id="question-idm45617486299360">
+    <p class="inline-paragraph">
+      Mettez &#xE0; jour votre rapport avec :
+    </p>
+<p></p>
+    <ul>
+      <li>une comparaison &#x201C;avant/apr&#xE8;s&#x201D; sur <strong>2 images</strong> (captures UI) : bbox seule vs bbox + points,</li>
+      <li>pour chaque cas : la liste des points utilis&#xE9;s (coordonn&#xE9;es + FG/BG) et le masque index choisi,</li>
+      <li>un court paragraphe (6&#x2013;10 lignes) : dans quels cas les points BG sont indispensables ? quels cas restent difficiles ?</li>
+    </ul>
+  </div>
+</div>
+  
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617487786832">Bilan et réflexion (POC vers produit) + remise finale</h3>
+<div class="exercice-content " id="exercice-idm45617487786832">
+    <p>
+      Cet exercice final sert &#xE0; prendre du recul sur votre POC : ce qui marche bien, ce qui est fragile, et ce qu&#x2019;il faudrait ajouter
+      pour passer &#xE0; une int&#xE9;gration &#x201C;produit&#x201D; (robuste, maintenable, observable).
+    </p>
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487785808"></h4>
+<div class="question-content " id="question-idm45617487785808">
+      <p class="inline-paragraph">
+        Dans votre rapport, r&#xE9;digez une r&#xE9;ponse courte (8&#x2013;12 lignes) &#xE0; la question suivante :
+        <strong>quels sont les 3 principaux facteurs qui font &#xE9;chouer votre segmentation</strong> (sur vos images),
+        et quelles actions concr&#xE8;tes (data, UI, pipeline) permettraient d&#x2019;am&#xE9;liorer la situation ?
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          Attendu : des observations concr&#xE8;tes issues de vos essais (fond complexe, transparence, objets fins, occlusions,
+          ambigu&#xEF;t&#xE9;s dans la bbox, etc.), et des pistes actionnables (points BG, contraintes bbox, post-traitement, dataset d&#xE9;di&#xE9;, etc.).
+        </p>
+      </div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487332400"></h4>
+<div class="question-content " id="question-idm45617487332400">
+      <p class="inline-paragraph">
+        Dans votre rapport, r&#xE9;digez une r&#xE9;ponse courte (8&#x2013;12 lignes) &#xE0; la question suivante :
+        <strong>si vous deviez industrialiser cette brique</strong>, que loggueriez-vous et que monitoreriez-vous en priorit&#xE9; ?
+        Donnez au minimum 5 &#xE9;l&#xE9;ments.
+      </p>
+<p></p>
+      <div class="remarque">
+        <p>
+          Ne restez pas th&#xE9;orique : proposez une liste de signaux mesurables et expliquez bri&#xE8;vement comment ils vous aideraient &#xE0; d&#xE9;tecter
+          des r&#xE9;gressions ou du drift.
+        </p>
+      </div>
+    </div>
+</div>
+    
+
+    <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486240016"></h4>
+<div class="question-content " id="question-idm45617486240016">
+      <p class="inline-paragraph">
+        Remise finale :
+      </p>
+<p></p>
+      <ul>
+        <li>V&#xE9;rifiez que votre d&#xE9;p&#xF4;t contient bien <span class="code "><span class="code-container">TP1/</span></span> avec le code source et le rapport.</li>
+        <li>V&#xE9;rifiez que vous n&#x2019;avez pas ajout&#xE9; de fichiers trop volumineux (notamment les checkpoints SAM).</li>
+        <li>Faites un <strong>push</strong> de votre d&#xE9;p&#xF4;t et ajoutez un <strong>tag</strong> <span class="code "><span class="code-container">TP1</span></span> pointant vers la version rendue.</li>
+        <li>Envoyez le lien de votre d&#xE9;p&#xF4;t &#xE0; l&#x2019;enseignant.</li>
+      </ul>
+    </div>
+</div>
+    
+
+  
+</div>
+</div>
+
+
+</div>
+</div>
+</div></div>
+
+
+  	<div class='footer'>
+			<div class='logo'>
+        <a href="https://www.telecom-sudparis.eu">
+	<img src="../../infra-web-cours/wp/wp-content/themes/tsp-inf/tsp.png" 
+			 width="75"
+			 height="75"
+			 alt="Telecom SudParis"/>
+</a>
+
+<a href="https://www.imt.fr">
+	<img src="../../infra-web-cours/wp/wp-content/themes/tsp-inf/imt.jpg" 
+			 width="143"
+			 height="75"
+			 alt="Telecom SudParis"/>
+</a>
+			</div>
+
+			<div class='address'>
+        <p><b><a href="https://www.telecom-sudparis.eu" class="hide-link">
+	Telecom SudParis</a></b><br/>
+	<b><a href="https://www.ip-paris.fr/en" class="hide-link">
+		Institut Polytechnique de Paris</a></b></p>
+<p>9, rue Charles Fourier<br/>
+	F-91011 Evry Cedex France</p>
+<p>19, Place Marguerite Perey<br/>
+	F-91120 Palaiseau Cedex France<br/></p>
+
+			</div>
+		
+			<div class='copyright'>
+        &#9400; 2020&#x2013;2026 Télécom SudParis
+			</div>
+		</div>
+
+    <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+		<div>
+			  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/lang-lisp.js"></script>
+  <script src='../../infra-web-cours/wp/wp-content/themes/tsp-inf/menu.js'></script>
+  <script src='../../infra-web-cours/infra-web-cours/current/tsp.js'></script>
+		</div>
+	</body>
+</html>
