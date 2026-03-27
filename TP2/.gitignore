@@ -1,0 +1,7 @@
+outputs/*.png
+outputs/*.jpg
+!outputs/.gitkeep
+inputs/*.jpg
+inputs/*.jpeg
+inputs/*.png
+!inputs/README.txt
