@@ -1,0 +1,9 @@
+.venv*/
+venv*/
+__pycache__/
+*.pyc
+*.wav
+*.mp3
+*.m4a
+TP3/models/
+TP3/outputs/
