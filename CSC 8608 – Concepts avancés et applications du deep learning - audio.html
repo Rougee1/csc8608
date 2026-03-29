@@ -1,0 +1,1622 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Gaël Thomas">
+
+	    <title>CSC 8608 &ndash; Concepts avancés et applications du deep learning - audio</title>
+  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans&#038;'/>
+  <link rel='stylesheet' type='text/css' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/wp/wp-content/themes/tsp-inf/bootstrap/css/bootstrap-reboot.min.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/wp/wp-content/themes/tsp-inf/style.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/wp/wp-content/themes/tsp-inf/tsp/style.css'/>
+  <link rel='stylesheet' type='text/css' href='../../infra-web-cours/infra-web-cours/current/tsp.css'/>
+  </head>
+
+	<body>
+		<div class='header'>
+      <a class='logo' href="https://www.telecom-sudparis.eu">
+  <img src="../../infra-web-cours/wp/wp-content/themes/tsp-inf/tsp.png" 
+	     alt="Telecom SudParis"/>
+</a>
+      
+			<a class='title' href="?page=main">
+				<h1>CSC 8608 &ndash; Concepts avancés et applications du deep learning</h1>
+			</a>
+      
+			<a class='tagline' href="https://www-inf.telecom-sudparis.eu/COURS/infra-web-cours/portail/">
+				Portail informatique			</a>
+
+			<div class='navbar dropdown-area'>
+				<div class='navbar-toggler dropdown-button' id='main-menu'><!-- style='background-color: cyan;'> -->
+					<div class="navbar-toggler-icon"></div>
+				</div>
+
+				<div class='navbar-menu tsp-menu' data-toggler='main-menu'><!-- style='background-color: lightgreen;'> -->
+					<div id="chapters-list">
+<ul class="current-week" data-current-week="8">
+	<li>
+		Liens utiles
+		<ul>
+			<li><a href="?page=main">Pr&#xE9;sentation</a></li>
+                        <li><a href="?page=planning">Emploi du temps</a></li>
+			<li><a href="?page=modalite">Notation</a></li>
+            <li><a href="?page=exercices/project">Projet</a></li>
+		</ul>
+	</li>
+
+  <li>
+    Supports
+    <ul class="chapitres">
+        <li>
+            <div class="chapter-id">CI1</div>
+            <div class="chapter-title">Modern Computer Vision</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/modern_cv.pdf">Cours</a>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/modern_cv&amp;wrap=true">Exercices</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+<ul>
+<li>Vision moderne</li>
+<li>ViT &amp; Swin</li>
+<li>YOLO &amp; DETR</li>
+<li>SAM segmentation</li>
+<li>MLOps vision</li> </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CM1</div>
+            <div class="chapter-title">Reading and presenting scientific publications</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/02_course_structure_reading_a_paper_presentation_tips.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                    <li>Introduction to the assignment</li>
+                    <li>How to read a scientific publication</li>
+                    <li>Presentation tips</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI2</div>
+            <div class="chapter-title">G&#xE9;n&#xE9;ration d'image</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/image_generation.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/image_generation&amp;wrap=true">Exercices</a>
+                    </li>
+		    <li>
+<a class="all-in-one" href="?page=cours/cc1&amp;wrap=true">Pr&#xE9;paration CC1</a> </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+			<ul>
+			  <li>Mod&#xE8;les g&#xE9;n&#xE9;ratifs</li>
+			  <li>Diffusion latente</li>
+			  <li>Conditionnement texte</li>
+			  <li>Param&#xE8;tres d'inf&#xE9;rence</li>
+			  <li>&#xC9;valuation d'images</li>
+			</ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI3</div>
+            <div class="chapter-title">Deep learning pour l'audio</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/audio.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/audio&amp;wrap=true">Exercices</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                  <li>Log-Mel spectrogram</li>
+                  <li>Self-supervised learning</li>
+                  <li>Whisper ASR</li>
+                  <li>Conformer</li>
+                  <li>Vocoder</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI4</div>
+            <div class="chapter-title">Graph Neural Networks</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/gnn.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/gnn&amp;wrap=true">Exercices</a>
+                    </li>
+		    <li>
+<a class="all-in-one" href="?page=cours/cc2&amp;wrap=true">Pr&#xE9;paration CC2</a> </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                  <li>Message Passing Neural Networks</li>
+                  <li>Convolution spectrale via Laplacien</li>
+                  <li>GCN GraphSAGE GAT</li>
+                  <li>Node classification Link prediction</li>
+                  <li>Neighbor sampling et scalabilit&#xE9;</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI5</div>
+            <div class="chapter-title">Deep Reinforcement Learning</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/deep_rl.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/deep_rl&amp;wrap=true">Exercices</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+                <ul>
+                    <li>Apprentissage par Renforcement</li>
+                    <li>&#xC9;quation de Bellman</li>
+                    <li>Deep Q-Network</li>
+                    <li>Policy Gradient</li>
+                    <li>Actor-Critic</li>
+                    <li>Exploration et Exploitation</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="chapter-id">CI6</div>
+            <div class="chapter-title">XAI</div>
+            <div class="chapter-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="../Supports/cours/xai.pdf">Cours</a>
+                        <div class="expanded-version"> &#x2013; 1h30min</div>
+                    </li>
+                    <li>
+                        <a class="all-in-one" href="?page=exercices/xai&amp;wrap=true">Exercices</a>
+                    </li>
+		    <li>
+<a class="all-in-one" href="?page=cours/cc3&amp;wrap=true">Pr&#xE9;paration CC3</a> </li>
+                </ul>
+            </div>
+            <div class="chapter-notion">
+		<ul>
+		  <li>Bo&#xEE;te noire</li>
+		  <li>Explicabilit&#xE9; post-hoc</li>
+		  <li>Valeurs de Shapley</li>
+		  <li>Gradients int&#xE9;gr&#xE9;s</li>
+		  <li>Courant r&#xE9;siduel</li>
+		</ul>
+            </div>
+        </li>
+
+    </ul>
+</li>
+
+
+<!-- Local Variables: -->
+<!-- mode: web -->
+<!-- mode: flyspell -->
+<!-- ispell-dictionary: "french" -->
+<!-- coding: utf-8 -->
+<!-- End: -->
+</ul>
+
+<!-- Local Variables: -->
+<!-- mode: web -->
+<!-- mode: flyspell -->
+<!-- ispell-dictionary: "french" -->
+<!-- coding: utf-8 -->
+<!-- End: -->
+</div>				</div>
+				
+				<div class='navbar-search'>
+					<div class='dropdown-target fade-height' data-from='main-menu'>
+						<div class='dropdown-button d-none d-md-block' id='search'><i class='fas fa-search'></i></div>
+						<form role='search' 
+									class='search-menu dropdown-target fade-height' 
+									data-from='search'
+									action="/COURS/CSC8608/Supports/index.php">
+							<div>
+								<input type="text" name="s" placeholder="Search" aria-label="Search"/>
+								<button type='submit'><i class='fas fa-search'></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<div class='content cours'>
+  <div class="main" id="main-content">
+<div class="chapitre-container ">
+<h2 class="chapitre-toggle
+          toggle
+          " data-toggle-to="chapitre-idm45617487751648">CI : Deep learning pour audio</h2>
+<div class="chapitre-content " id="chapitre-idm45617487751648">
+	
+
+
+<p>
+  Dans ce TP, vous allez prototyper une mini-cha&#xEE;ne de traitement audio inspir&#xE9;e d&#x2019;un contexte &#x201C;call center&#x201D;&#xA0;: &#xE0; partir d&#x2019;enregistrements d&#x2019;appels (anglais, ~1 minute), vous allez segmenter automatiquement la parole (VAD&#xA0;: Voice Activity Detection), transcrire les segments avec un mod&#xE8;le Whisper pr&#xEA;t &#xE0; l&#x2019;emploi (ASR&#xA0;: Automatic Speech Recognition), puis produire des indicateurs simples et utiles pour un produit (mots-cl&#xE9;s, intention approximative, redaction d&#x2019;informations sensibles).
+</p>
+
+<p>
+  Le but n&#x2019;est pas d&#x2019;entra&#xEE;ner un mod&#xE8;le, mais de raisonner comme un&#xB7;e ing&#xE9;nieur&#xB7;e&#xA0;: d&#xE9;finir un contrat d&#x2019;entr&#xE9;e audio, instrumenter la latence, structurer les sorties, et identifier ce qui peut casser en production (segmentation, bruit, variabilit&#xE9;). Le rendu est un rapport Markdown pragmatique, aliment&#xE9; au fil de l&#x2019;eau par des captures de terminal, des extraits de sorties et quelques r&#xE9;flexions concises sur les choix techniques.
+</p>
+
+<div class="objectif">
+  <ul>
+    <li>Mettre en place un pipeline audio minimal et reproductible pour un cas d&#x2019;usage &#x201C;call center&#x201D;.</li>
+    <li>Appliquer une segmentation voix/silence avec un VAD (Voice Activity Detection) et en extraire des statistiques utiles.</li>
+    <li>Transcrire des segments audio avec un mod&#xE8;le Whisper (ASR) en ma&#xEE;trisant le co&#xFB;t et la latence.</li>
+    <li>Structurer les sorties (segments, timestamps, texte) pour une exploitation produit.</li>
+    <li>Produire une &#x201C;fiche appel&#x201D; avec des analytics simples&#xA0;: mots-cl&#xE9;s, intention approximative, redaction PII (emails, num&#xE9;ros).</li>
+    <li>Ex&#xE9;cuter sur GPU via Slurm (fortement recommand&#xE9;) et comparer qualitativement les temps CPU/GPU.</li>
+  </ul>
+</div>
+
+
+	<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617487248128">Initialisation du TP3 et vérification de l’environnement</h3>
+<div class="exercice-content " id="exercice-idm45617487248128">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617488434208"></h4>
+<div class="question-content " id="question-idm45617488434208">
+    Cr&#xE9;ez le dossier <span class="code "><span class="code-container">TP3</span></span> dans le d&#xE9;p&#xF4;t (r&#xE9;utilisez le d&#xE9;p&#xF4;t du TP pr&#xE9;c&#xE9;dent), avec une structure minimale pour &#xE9;viter le d&#xE9;sordre.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# &#xC0; ex&#xE9;cuter &#xE0; la racine du d&#xE9;p&#xF4;t
+mkdir -p TP3/assets TP3/outputs
+    </div></div>
+    <div class="remarque">
+      Les livrables doivent rester l&#xE9;gers&#xA0;: ne commitez pas de fichiers audio volumineux. Pr&#xE9;f&#xE9;rez des captures d&#x2019;&#xE9;cran et des petits fichiers texte (JSON/CSV).
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487306048"></h4>
+<div class="question-content " id="question-idm45617487306048">
+    Dans <span class="code "><span class="code-container">TP3</span></span>, cr&#xE9;ez un fichier <span class="code "><span class="code-container">sanity_check.py</span></span> &#xE0; partir du squelette suivant, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import torch
+import torchaudio
+import transformers
+import datasets
+
+def main():
+    print("=== TP3 sanity check ===")
+    print("torch:", torch.__version__)
+    print("torchaudio:", torchaudio.__version__)
+    print("transformers:", transformers.__version__)
+    print("datasets:", datasets.__version__)
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print("device:", device)
+
+    if device == "cuda":
+        # TODO: compl&#xE9;ter les informations GPU
+        gpu_name = torch.cuda.get_device_name(________)
+        gpu_mem_gb = torch.cuda.get_device_properties(________).total_memory / (1024**3)
+        print("gpu_name:", gpu_name)
+        print("gpu_mem_gb:", round(gpu_mem_gb, 2))
+
+    # G&#xE9;n&#xE8;re un mini signal audio (1 seconde) pour valider torchaudio
+    sr = 16000
+    t = torch.linspace(0, 1, sr)
+    wav = 0.1 * torch.sin(2 * torch.pi * 440.0 * t)  # 440 Hz
+    wav = wav.unsqueeze(0)  # [1, time]
+
+    mel = torchaudio.transforms.MelSpectrogram(
+        sample_rate=sr,
+        n_fft=400,
+        hop_length=160,
+        n_mels=80
+    )(wav)
+    logmel = (mel + 1e-6).log()
+
+    print("wav_shape:", tuple(wav.shape))
+    print("logmel_shape:", tuple(logmel.shape))
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617488103728"></span><span class="tip-content " id="tip-idm45617488103728">
+      Si <span class="code "><span class="code-container">torch.cuda.is_available()</span></span> est <span class="code "><span class="code-container">False</span></span> sur le n&#x153;ud de login, ex&#xE9;cuter ce check via un job Slurm permet souvent de voir correctement le GPU.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487803648"></h4>
+<div class="question-content " id="question-idm45617487803648">
+    Ex&#xE9;cutez <span class="code "><span class="code-container">sanity_check.py</span></span> (localement ou via Slurm) et ajoutez au rapport Markdown une capture d&#x2019;&#xE9;cran montrant&#xA0;:
+    le <span class="code "><span class="code-container">device</span></span> d&#xE9;tect&#xE9;, le nom du GPU (si GPU), et les shapes <span class="code "><span class="code-container">wav_shape</span></span>/<span class="code "><span class="code-container">logmel_shape</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# Depuis la racine du d&#xE9;p&#xF4;t
+python TP3/sanity_check.py
+    </div></div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617487830080">Constituer un mini-jeu de données : enregistrement d’un “appel” (anglais) + vérification audio</h3>
+<div class="exercice-content " id="exercice-idm45617487830080">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487803520"></h4>
+<div class="question-content " id="question-idm45617487803520">
+    Enregistrez vous-m&#xEA;me un court audio (objectif&#xA0;: ~60 secondes) dans lequel vous lisez le texte anglais ci-dessous, &#xE0; voix claire et continue.
+    Sauvegardez-le en <strong>WAV mono</strong> dans <span class="code "><span class="code-container">TP3/data/call_01.wav</span></span>.
+    <div class="remarque">
+      Si vous pr&#xE9;f&#xE9;rez, vous pouvez enregistrer en <span class="code "><span class="code-container">.m4a</span></span>/<span class="code "><span class="code-container">.mp3</span></span>, mais vous devrez ensuite convertir en WAV mono 16 kHz pour garantir la compatibilit&#xE9;.
+    </div>
+    <div class="remarque">Vous pouvez utiliser <a href="https://online-voice-recorder.com/">https://online-voice-recorder.com/</a> et <a href="https://convertio.co/fr/mp3-wav/">https://convertio.co/fr/mp3-wav/</a>
+</div>
+    <div class="code code-block"><div class="code-container" data-code-prettify="text">
+Hello, thank you for calling customer support. 
+My name is Alex, and I will help you today.
+I&#x2019;m calling about an order that arrived damaged.
+The package was delivered yesterday, but the screen is cracked.
+I would like a refund or a replacement as soon as possible.
+The order number is A X 1 9 7 3 5.
+You can reach me at john dot smith at example dot com.
+Also, my phone number is 555 0199.
+Thank you.
+    </div></div>
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487790320"></span><span class="tip-content " id="tip-idm45617487790320">
+      Objectif p&#xE9;dagogique&#xA0;: on cr&#xE9;e un &#x201C;mini call center&#x201D; contr&#xF4;l&#xE9;, avec des &#xE9;l&#xE9;ments difficiles (num&#xE9;ro de commande, email, t&#xE9;l&#xE9;phone) utiles pour tester la redaction PII plus tard.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487497792"></h4>
+<div class="question-content " id="question-idm45617487497792">
+    Cr&#xE9;ez le dossier <span class="code "><span class="code-container">TP3/data</span></span> si n&#xE9;cessaire, puis v&#xE9;rifiez que votre fichier audio est bien pr&#xE9;sent et raisonnable (dur&#xE9;e ~1 minute).
+    Ajoutez au rapport une capture d&#x2019;&#xE9;cran montrant la commande et les m&#xE9;tadonn&#xE9;es (dur&#xE9;e, sample rate, canaux).
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+mkdir -p TP3/data
+ls -lh TP3/data/call_01.wav
+
+# Inspecter l'audio (au choix)
+ffprobe TP3/data/call_01.wav
+# ou
+soxi TP3/data/call_01.wav
+    </div></div>
+    <div class="remarque">
+      Ne collez pas toute la sortie brute dans le rapport&#xA0;: une capture d&#x2019;&#xE9;cran avec les lignes pertinentes suffit.
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486863648"></h4>
+<div class="question-content " id="question-idm45617486863648">
+    Si votre fichier n&#x2019;est pas en WAV mono 16 kHz, convertissez-le avec <span class="code "><span class="code-container">ffmpeg</span></span> en compl&#xE9;tant les trous <span class="code "><span class="code-container">________</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+# Exemple : convertir un fichier source en WAV mono 16 kHz
+ffmpeg -i TP3/data/________ -ac 1 -ar ________ TP3/data/call_01.wav
+    </div></div>
+    
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617486703280"></span><span class="tip-content " id="tip-idm45617486703280">
+      Le couple <span class="code "><span class="code-container">-ac 1</span></span> (mono) et <span class="code "><span class="code-container">-ar 16000</span></span> (16 kHz) simplifie la suite&#xA0;: beaucoup de mod&#xE8;les ASR &#x201C;speech&#x201D; supposent 16 kHz.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487786992"></h4>
+<div class="question-content " id="question-idm45617487786992">
+    Cr&#xE9;ez un script <span class="code "><span class="code-container">TP3/inspect_audio.py</span></span> &#xE0; partir du code ci-dessous, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    Ce script doit afficher&#xA0;: la forme du tenseur, le sample rate, la dur&#xE9;e, et quelques statistiques simples (RMS, taux de clipping).
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import torch
+import torchaudio
+
+def rms(x: torch.Tensor) -&gt; float:
+    return float(torch.sqrt(torch.mean(x ** 2)).item())
+
+def clipping_rate(x: torch.Tensor, thr: float = 0.99) -&gt; float:
+    return float((x.abs() &gt; thr).float().mean().item())
+
+def main():
+    path = "TP3/data/call_01.wav"
+    wav, sr = torchaudio.load(path)          # wav: [channels, time]
+    wav = wav.mean(dim=0, keepdim=True)      # force mono [1, time]
+    num_samples = wav.shape[________]
+    duration_s = num_samples / sr
+
+    print("path:", path)
+    print("sr:", sr)
+    print("shape:", tuple(wav.shape))
+    print("duration_s:", round(duration_s, 2))
+    print("rms:", round(rms(wav), 4))
+    print("clipping_rate:", round(clipping_rate(wav), 4))
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487586672"></h4>
+<div class="question-content " id="question-idm45617487586672">
+    Ex&#xE9;cutez <span class="code "><span class="code-container">inspect_audio.py</span></span> sur votre audio et ajoutez au rapport une capture d&#x2019;&#xE9;cran montrant les valeurs affich&#xE9;es.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python TP3/inspect_audio.py
+    </div></div>
+    <div class="remarque">
+      Si votre <span class="code "><span class="code-container">clipping_rate</span></span> est &#xE9;lev&#xE9;, r&#xE9;-enregistrez en baissant le gain micro, ou renormalisez prudemment.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617490640544">VAD (Voice Activity Detection) : segmenter la parole et mesurer speech/silence</h3>
+<div class="exercice-content " id="exercice-idm45617490640544">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617490640144"></h4>
+<div class="question-content " id="question-idm45617490640144">
+    Cr&#xE9;ez le fichier <span class="code "><span class="code-container">TP3/vad_segment.py</span></span> &#xE0; partir du code ci-dessous, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    Le script doit&#xA0;:
+    (i) charger <span class="code "><span class="code-container">call_01.wav</span></span>,
+    (ii) ex&#xE9;cuter un VAD pr&#xEA;t &#xE0; l&#x2019;emploi,
+    (iii) produire une liste de segments <span class="code "><span class="code-container">(start_s, end_s)</span></span>,
+    (iv) calculer des statistiques simples.
+    <div class="remarque">
+      On utilise un VAD &#x201C;bo&#xEE;te noire&#x201D; pour rester pragmatique. L&#x2019;objectif est d&#x2019;apprendre &#xE0; exploiter la segmentation dans une pipeline.
+    </div>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import json
+from dataclasses import dataclass
+from typing import List, Tuple
+
+import torch
+import torchaudio
+
+# silero-vad (mod&#xE8;le VAD l&#xE9;ger pr&#xEA;t &#xE0; l&#x2019;emploi)
+# R&#xE9;f&#xE9;rence: https://github.com/snakers4/silero-vad
+# Installation (si besoin): pip install silero-vad
+from silero_vad import get_speech_timestamps
+
+@dataclass
+class Segment:
+    start_s: float
+    end_s: float
+
+def load_wav_mono_16k(path: str) -&gt; Tuple[torch.Tensor, int]:
+    wav, sr = torchaudio.load(path)          # [C, T]
+    wav = wav.mean(dim=0, keepdim=True)      # mono [1, T]
+    if sr != 16000:
+        wav = torchaudio.functional.resample(wav, sr, 16000)
+        sr = 16000
+    return wav.squeeze(0), sr                # [T], sr
+
+def main():
+    in_path = "TP3/data/call_01.wav"
+    out_path = "TP3/outputs/vad_segments_call_01.json"
+    os.makedirs("TP3/outputs", exist_ok=True)
+
+    wav, sr = load_wav_mono_16k(in_path)     # wav: [T]
+    duration_s = wav.numel() / sr
+
+    model, utils = torch.hub.load(
+        repo_or_dir="snakers4/silero-vad",
+        model="silero_vad",
+        trust_repo=True
+    )
+    model.to("cpu").eval()
+
+    # TODO: VAD -&gt; timestamps (en indices samples)
+    # Astuce: get_speech_timestamps attend un tenseur 1D float32 en 16 kHz
+    speech_ts = get_speech_timestamps(
+        wav.to(torch.float32),
+        model,
+        sampling_rate=________
+    )
+
+    # Convertir en segments en secondes
+    segments: List[Segment] = []
+    for seg in speech_ts:
+        start_s = seg["start"] / sr
+        end_s = seg["end"] / sr
+        segments.append(Segment(start_s=start_s, end_s=end_s))
+
+    # Filtrage simple : supprimer segments trop courts
+    min_dur_s = 0.30
+    segments = [s for s in segments if (s.end_s - s.start_s) &gt;= min_dur_s]
+
+    # Stats
+    total_speech_s = sum((s.end_s - s.start_s) for s in segments)
+    speech_ratio = total_speech_s / max(duration_s, 1e-9)
+
+    print("duration_s:", round(duration_s, 2))
+    print("num_segments:", len(segments))
+    print("total_speech_s:", round(total_speech_s, 2))
+    print("speech_ratio:", round(speech_ratio, 3))
+
+    # Sauvegarde JSON
+    payload = {
+        "audio_path": in_path,
+        "sample_rate": sr,
+        "duration_s": duration_s,
+        "min_segment_s": min_dur_s,
+        "segments": [{"start_s": s.start_s, "end_s": s.end_s} for s in segments],
+        "stats": {
+            "num_segments": len(segments),
+            "total_speech_s": total_speech_s,
+            "speech_ratio": speech_ratio
+        }
+    }
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+
+    print("saved:", out_path)
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487273536"></span><span class="tip-content " id="tip-idm45617487273536">
+      Si l&#x2019;import <span class="code "><span class="code-container">silero_vad</span></span> &#xE9;choue, installez-le dans votre environnement conda. Gardez une trace dans le rapport de la commande utilis&#xE9;e (une seule ligne suffit).
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487295472"></h4>
+<div class="question-content " id="question-idm45617487295472">
+    Ex&#xE9;cutez le script VAD, puis ouvrez le fichier JSON g&#xE9;n&#xE9;r&#xE9;.
+    Ajoutez au rapport&#xA0;:
+    une capture d&#x2019;&#xE9;cran du terminal (les stats) et un extrait de 5 segments (copi&#xE9;/coll&#xE9;) montrant <span class="code "><span class="code-container">start_s</span></span> et <span class="code "><span class="code-container">end_s</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python TP3/vad_segment.py
+cat TP3/outputs/vad_segments_call_01.json | head -n 60
+    </div></div>
+    <div class="remarque">
+      Ne collez pas tout le JSON dans le rapport. Un extrait court + une capture suffisent.
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487169088"></h4>
+<div class="question-content " id="question-idm45617487169088">
+    Analyse courte (2&#x2013;4 lignes) dans le rapport&#xA0;: votre ratio speech/silence vous semble-t-il coh&#xE9;rent avec votre mani&#xE8;re de lire le texte (pauses, respiration)&#xA0;?
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487168496"></span><span class="tip-content " id="tip-idm45617487168496">
+      Vous pouvez commenter si vous observez beaucoup de micro-segments (VAD trop sensible) ou au contraire des segments tr&#xE8;s longs (VAD trop permissif).
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487276640"></h4>
+<div class="question-content " id="question-idm45617487276640">
+    Ajustez le seuil de filtrage <span class="code "><span class="code-container">min_dur_s</span></span> en compl&#xE9;tant le trou ci-dessous, relancez, puis comparez <span class="code "><span class="code-container">num_segments</span></span> et <span class="code "><span class="code-container">speech_ratio</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# TODO: tester un filtrage plus strict
+min_dur_s = ________
+    </div></div>
+
+    
+
+    <div class="remarque">
+      Dans le rapport, une phrase suffit&#xA0;: &#x201C;en passant de 0.30 &#xE0; 0.60, num_segments &#x2193;, speech_ratio ~ &#x2026;&#x201D;.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617490686992">ASR avec Whisper : transcription segmentée + mesure de latence</h3>
+<div class="exercice-content " id="exercice-idm45617490686992">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617490686624"></h4>
+<div class="question-content " id="question-idm45617490686624">
+    Cr&#xE9;ez le fichier <span class="code "><span class="code-container">TP3/asr_whisper.py</span></span> &#xE0; partir du code ci-dessous, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    Le script doit&#xA0;:
+    charger l&#x2019;audio <span class="code "><span class="code-container">call_01.wav</span></span>, lire les segments VAD (JSON), transcrire chaque segment avec Whisper, reconstruire un transcript complet, et mesurer le temps total (ainsi qu&#x2019;un <em>RTF</em>).
+    <div class="remarque">
+      On transcrit par segments VAD pour limiter le co&#xFB;t et &#xE9;viter que Whisper &#x201C;d&#xE9;rive&#x201D; sur les silences. En production, ce pattern est fr&#xE9;quent.
+    </div>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import json
+import time
+from typing import Dict, Any, List
+
+import torch
+import torchaudio
+from transformers import pipeline
+
+def load_wav_mono_16k(path: str):
+    wav, sr = torchaudio.load(path)          # [C, T]
+    wav = wav.mean(dim=0, keepdim=True)      # mono [1, T]
+    if sr != 16000:
+        wav = torchaudio.functional.resample(wav, sr, 16000)
+        sr = 16000
+    return wav.squeeze(0), sr                # [T], sr
+
+def main():
+    audio_path = "TP3/data/call_01.wav"
+    vad_path = "TP3/outputs/vad_segments_call_01.json"
+    out_path = "TP3/outputs/asr_call_01.json"
+    os.makedirs("TP3/outputs", exist_ok=True)
+
+    wav, sr = load_wav_mono_16k(audio_path)
+    audio_duration_s = wav.numel() / sr
+
+    with open(vad_path, "r", encoding="utf-8") as f:
+        vad_payload = json.load(f)
+    segments = vad_payload["segments"]   # list of {start_s, end_s}
+
+    # Choix mod&#xE8;le : petit si CPU, plus gros si GPU (mais rester raisonnable)
+    model_id = "openai/________"  # trouver un mod&#xE8;le de whisper sur HuggingFace
+
+    device = 0 if torch.cuda.is_available() else -1
+
+    asr = pipeline(
+        task="automatic-speech-recognition",
+        model=model_id,
+        device=device
+    )
+
+    t0 = time.time()
+    results: List[Dict[str, Any]] = []
+
+    for i, seg in enumerate(segments):
+        start_s = float(seg["start_s"])
+        end_s = float(seg["end_s"])
+
+        start = int(start_s * sr)
+        end = int(end_s * sr)
+        seg_wav = wav[start:end]
+
+        # HF pipeline attend soit un chemin, soit un dict {"array": ..., "sampling_rate": ...}
+        inp = {"array": seg_wav.numpy(), "sampling_rate": sr}
+
+        generate_kwargs = {
+            "language": "english"
+        }
+        out = asr(inp, generate_kwargs=generate_kwargs)   # out: {"text": "...", ...}
+        text = out.get("text", "").strip()
+
+        results.append({
+            "segment_id": i,
+            "start_s": start_s,
+            "end_s": end_s,
+            "text": text
+        })
+
+    t1 = time.time()
+    elapsed_s = t1 - t0
+    rtf = elapsed_s / max(audio_duration_s, 1e-9)
+
+    # Reconstruction transcript complet (simple)
+    full_text = " ".join([r["text"] for r in results]).strip()
+
+    payload = {
+        "audio_path": audio_path,
+        "model_id": model_id,
+        "device": "cuda" if device == 0 else "cpu",
+        "audio_duration_s": audio_duration_s,
+        "elapsed_s": elapsed_s,
+        "rtf": rtf,
+        "segments": results,
+        "full_text": full_text
+    }
+
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+
+    print("model_id:", model_id)
+    print("device:", payload["device"])
+    print("audio_duration_s:", round(audio_duration_s, 2))
+    print("elapsed_s:", round(elapsed_s, 2))
+    print("rtf:", round(rtf, 3))
+    print("saved:", out_path)
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487364128"></span><span class="tip-content " id="tip-idm45617487364128">
+      Si un import &#xE9;choue au runtime, installez au besoin&#xA0;: <span class="code "><span class="code-container">pip install -U transformers torchaudio soundfile</span></span>.
+      (Une seule ligne dans le rapport suffit si vous avez d&#xFB; installer quelque chose.)
+      Si vous avez un OSError, essayez conda install -c conda-forge "ffmpeg&gt;=6".
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487485312"></h4>
+<div class="question-content " id="question-idm45617487485312">
+    Ex&#xE9;cutez <span class="code "><span class="code-container">asr_whisper.py</span></span> et ajoutez au rapport&#xA0;:
+    une capture d&#x2019;&#xE9;cran montrant <span class="code "><span class="code-container">model_id</span></span>, <span class="code "><span class="code-container">elapsed_s</span></span> et <span class="code "><span class="code-container">rtf</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python TP3/asr_whisper.py
+    </div></div>
+    <div class="remarque">
+      Gardez en t&#xEA;te l&#x2019;objectif&#xA0;: <span class="code "><span class="code-container">&lt; 5 minutes</span></span> sur ~1 minute d&#x2019;audio. Si c&#x2019;est trop lent, choisissez un mod&#xE8;le plus petit.
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487644224"></h4>
+<div class="question-content " id="question-idm45617487644224">
+    Ouvrez le fichier <span class="code "><span class="code-container">TP3/outputs/asr_call_01.json</span></span>.
+    Ajoutez au rapport&#xA0;:
+    un extrait de <strong>5 segments</strong> (copi&#xE9;/coll&#xE9;) et un extrait de <strong>5 lignes</strong> du <span class="code "><span class="code-container">full_text</span></span> (ou 3&#x2013;4 phrases maximum).
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+cat TP3/outputs/asr_call_01.json | head -n 120
+    </div></div>
+    <div class="remarque">
+      Ne collez pas tout le JSON. Un extrait court suffit.
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487750336"></h4>
+<div class="question-content " id="question-idm45617487750336">
+    Dans le rapport, &#xE9;crivez une analyse courte (4&#x2013;6 lignes max)&#xA0;:
+    la segmentation VAD vous semble-t-elle aider ou g&#xEA;ner la transcription (coupures de mots, pauses, ponctuation implicite)&#xA0;?
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617486803456"></span><span class="tip-content " id="tip-idm45617486803456">
+      Vous pouvez citer un exemple concret (un segment &#x201C;trop court&#x201D; ou &#x201C;trop long&#x201D;) en mentionnant son <span class="code "><span class="code-container">segment_id</span></span>.
+    </span></span>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617489561072">Call center analytics : redaction PII + intention + fiche appel</h3>
+<div class="exercice-content " id="exercice-idm45617489561072">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617489561312"></h4>
+<div class="question-content " id="question-idm45617489561312">
+    Cr&#xE9;ez le fichier <span class="code "><span class="code-container">TP3/callcenter_analytics.py</span></span> &#xE0; partir du code ci-dessous, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    Le script doit&#xA0;:
+    (i) charger <span class="code "><span class="code-container">TP3/outputs/asr_call_01.json</span></span>,
+    (ii) d&#xE9;tecter et masquer des PII simples (email, t&#xE9;l&#xE9;phone) dans le transcript,
+    (iii) estimer une intention (heuristique keywords),
+    (iv) produire une &#x201C;fiche appel&#x201D; en JSON l&#xE9;ger.
+    <div class="remarque">
+      On reste volontairement simple&#xA0;: heuristiques et regex. En produit, on it&#xE8;re souvent ainsi avant d&#x2019;ajouter des mod&#xE8;les plus complexes.
+    </div>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import re
+import json
+from typing import Dict, Any, List, Tuple
+from collections import Counter
+
+EMAIL_RE = re.compile(r"([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+)\.([A-Za-z]{2,})")
+# T&#xE9;l&#xE9;phone US simplifi&#xE9; (ex: 555 0199, 555-0199, 5550199). On masque large.
+PHONE_RE = re.compile(r"\b(\d[\d\-\s]{5,}\d)\b")
+
+INTENTS = {
+    "refund_or_replacement": ["refund", "replacement", "damaged", "cracked", "broken"],
+    "delivery_issue": ["delivered", "package", "arrived", "yesterday", "order"],
+    "general_support": ["help", "support", "thank you", "calling"],
+}
+
+STOPWORDS = set([
+    "the","a","an","and","or","to","for","of","in","on","is","it","i","you","we","my","your",
+    "was","were","be","as","at","but","this","that","with","about","today"
+])
+
+def redact_pii(text: str) -&gt; Tuple[str, Dict[str, int]]:
+    stats = {"emails": 0, "phones": 0}
+
+    # TODO: masquer emails
+    def _email_sub(m):
+        stats["emails"] += 1
+        return "[REDACTED_EMAIL]"
+
+    text = EMAIL_RE.sub(_email_sub, text)
+
+    # TODO: masquer t&#xE9;l&#xE9;phones
+    def _phone_sub(m):
+        stats["phones"] += 1
+        return "[REDACTED_PHONE]"
+
+    text = PHONE_RE.sub(_phone_sub, text)
+    return text, stats
+
+def normalize(text: str) -&gt; str:
+    # minuscule + espaces
+    t = text.lower()
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
+def tokenize(text: str) -&gt; List[str]:
+    # tokens alphab&#xE9;tiques simples
+    toks = re.findall(r"[a-z]+", text.lower())
+    return [w for w in toks if w not in STOPWORDS and len(w) &gt; 2]
+
+def score_intents(text: str) -&gt; Dict[str, int]:
+    t = normalize(text)
+    scores: Dict[str, int] = {}
+    for intent, kws in INTENTS.items():
+        s = 0
+        for kw in kws:
+            # TODO: compter occurrences na&#xEF;vement
+            s += t.count(________)
+        scores[intent] = s
+    return scores
+
+def pick_intent(scores: Dict[str, int]) -&gt; str:
+    # intention avec meilleur score ; fallback si tous &#xE0; 0
+    best_intent = max(scores.items(), key=lambda kv: kv[1])[0]
+    if scores[best_intent] == 0:
+        return "unknown"
+    return best_intent
+
+def main():
+    in_path = "TP3/outputs/asr_call_01.json"
+    out_path = "TP3/outputs/call_summary_call_01.json"
+    os.makedirs("TP3/outputs", exist_ok=True)
+
+    with open(in_path, "r", encoding="utf-8") as f:
+        asr = json.load(f)
+
+    full_text = asr["full_text"]
+    redacted_text, pii_stats = redact_pii(full_text)
+
+    tokens = tokenize(redacted_text)
+    top_terms = Counter(tokens).most_common(10)
+
+    intent_scores = score_intents(redacted_text)
+    intent = pick_intent(intent_scores)
+
+    summary = {
+        "audio_path": asr["audio_path"],
+        "model_id": asr["model_id"],
+        "device": asr["device"],
+        "audio_duration_s": asr["audio_duration_s"],
+        "elapsed_s": asr["elapsed_s"],
+        "rtf": asr["rtf"],
+        "pii_stats": pii_stats,
+        "intent_scores": intent_scores,
+        "intent": intent,
+        "top_terms": top_terms,
+        "redacted_text": redacted_text
+    }
+
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, indent=2)
+
+    print("intent:", intent)
+    print("pii_stats:", pii_stats)
+    print("top_terms:", top_terms[:5])
+    print("saved:", out_path)
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487067904"></span><span class="tip-content " id="tip-idm45617487067904">
+      Le &#x201C;t&#xE9;l&#xE9;phone&#x201D; en audio est souvent mal transcrit (espaces, tirets, mots). Ici on masque large, ce qui peut g&#xE9;n&#xE9;rer des faux positifs&#xA0;: c&#x2019;est acceptable pour un premier prototype.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487067024"></h4>
+<div class="question-content " id="question-idm45617487067024">
+    Ex&#xE9;cutez <span class="code "><span class="code-container">callcenter_analytics.py</span></span> et ajoutez au rapport une capture d&#x2019;&#xE9;cran montrant l&#x2019;intention d&#xE9;tect&#xE9;e et les stats PII.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python TP3/callcenter_analytics.py
+    </div></div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487752512"></h4>
+<div class="question-content " id="question-idm45617487752512">
+    Ouvrez <span class="code "><span class="code-container">TP3/outputs/call_summary_call_01.json</span></span> et ajoutez au rapport&#xA0;:
+    un extrait montrant <span class="code "><span class="code-container">intent_scores</span></span>, <span class="code "><span class="code-container">intent</span></span>, <span class="code "><span class="code-container">pii_stats</span></span> et les 5 premiers <span class="code "><span class="code-container">top_terms</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+cat TP3/outputs/call_summary_call_01.json | head -n 120
+    </div></div>
+    <div class="remarque">
+      Ne copiez/collez pas tout le champ <span class="code "><span class="code-container">redacted_text</span></span>. Un extrait de 2&#x2013;3 phrases suffit.
+    </div>
+  </div>
+</div>
+
+<div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486708400"></h4>
+<div class="question-content " id="question-idm45617486708400">
+  Les r&#xE9;sultats sont s&#xFB;rement assez mauvais. Cela vient de l'absence d'un post-traitement.
+  Am&#xE9;liorez <span class="code "><span class="code-container">TP2/callcenter_analytics.py</span></span> en ajoutant un post-traitement pragmatique du transcript avant les &#x201C;analytics&#x201D;.
+  Objectif&#xA0;: mieux g&#xE9;rer les identifiants &#x201C;&#xE9;pel&#xE9;s&#x201D; (A X 1 9&#x2026;), les emails &#x201C;parl&#xE9;s&#x201D; (dot/at, ou phrases mal reconnues), et les num&#xE9;ros coll&#xE9;s &#xE0; des mots (ex: <span class="code "><span class="code-container">5550199thank</span></span>).
+  Remplacez la partie &#x201C;PII&#x201D; du script par le bloc ci-dessous, puis relancez <span class="code "><span class="code-container">callcenter_analytics.py</span></span>.
+
+  <div class="code code-block"><div class="code-container" data-code-prettify="python">
+# Regex "strict" email (fonctionne apr&#xE8;s normalisation)
+EMAIL_RE = re.compile(r"\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b")
+
+# T&#xE9;l&#xE9;phone : 7+ digits au total, s&#xE9;parateurs optionnels (espaces, -, .)
+PHONE_RE = re.compile(r"\b(?:\d[\s\-\.]*){7,}\d\b")
+
+DIGIT_WORDS = {
+    "zero":"0","oh":"0","o":"0",
+    "one":"1","won":"1",
+    "two":"2","too":"2","to":"2",
+    "three":"3","free":"3","tree":"3",
+    "four":"4","for":"4",
+    "five":"5","fife":"5","hi":"5",
+    "six":"6",
+    "seven":"7",
+    "eight":"8","ate":"8",
+    "nine":"9",
+}
+
+def preclean(text: str) -&gt; str:
+    t = text.lower()
+
+    # S&#xE9;parer chiffres coll&#xE9;s &#xE0; des mots : "5550199thank" -&gt; "5550199 thank"
+    t = re.sub(r"(\d)([a-z])", r"\1 \2", t)
+    t = re.sub(r"([a-z])(\d)", r"\1 \2", t)
+
+    # Ajouter un espace apr&#xE8;s ponctuation coll&#xE9;e entre deux tokens : "hello.thank" -&gt; "hello. thank"
+    t = re.sub(r"([a-z0-9])([.,!?])([a-z0-9])", r"\1\2 \3", t)
+
+    # Apostrophes g&#xEA;nantes pour les heuristiques (ex: "don't" -&gt; "dont")
+    t = t.replace("'", "").replace("&#x2019;", "").replace("...", " ")
+
+    # Compacter espaces
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
+def normalize_spelled_tokens(text: str) -&gt; str:
+    """
+    Normalisation pragmatique:
+    - 'dot' -&gt; '.', 'at' -&gt; '@' (utile email)
+    - mots-chiffres -&gt; digits
+    - collage des s&#xE9;quences de digits s&#xE9;par&#xE9;s (&gt;= 6 digits)
+    """
+    t = preclean(text)
+
+    # Normalisation email parl&#xE9;e
+    t = re.sub(r"\bdot\b", ".", t)
+    t = re.sub(r"\bat\b", "@", t)
+    t = re.sub(r"\s*([.@])\s*", r"\1", t)  # supprime espaces autour de . et @
+
+    # Remplacer mots-&gt;digits (token-level)
+    def _tok_sub(m):
+        w = m.group(0)
+        return DIGIT_WORDS.get(w, w)
+
+    t = re.sub(r"\b[a-z]+\b", _tok_sub, t)
+
+    # Coller les digits isol&#xE9;s : "5 5 5 0 1 9 9" -&gt; "5550199"
+    def _collapse(m):
+        digits = re.findall(r"\d", m.group(0))
+        return "".join(digits)
+
+    t = re.sub(r"(?:\b\d\b[\s,\-\.]*){6,}\b", _collapse, t)
+
+    # Re-s&#xE9;parer digits/lettres au cas o&#xF9; apr&#xE8;s collapse
+    t = re.sub(r"(\d)([a-z])", r"\1 \2", t)
+    return t
+
+def redact_order_id(text: str) -&gt; Tuple[str, int]:
+    """
+    Masque un identifiant apr&#xE8;s 'order number is' m&#xEA;me s&#x2019;il est &#xE9;pel&#xE9; (a.x.1.9.7.3.5).
+    """
+    count = 0
+    pattern = re.compile(r"\border number is\b\s+([a-z0-9\s\.\-]{3,80})", re.IGNORECASE)
+
+    def _sub(m):
+        nonlocal count
+        span = m.group(1)
+        cleaned = re.findall(r"[A-Za-z0-9]", span)
+        if len(cleaned) &gt;= 5:
+            count += 1
+            return "order number is [REDACTED_ORDER]"
+        return m.group(0)
+
+    return pattern.sub(_sub, text), count
+
+def redact_spoken_email(text: str) -&gt; Tuple[str, int]:
+    """
+    1) masque les vrais emails d&#xE9;tectables (apr&#xE8;s normalisation)
+    2) sinon masque par contexte : "reach me ..." jusqu'&#xE0; un marqueur (also/phone/order/thank) ou fin
+    """
+    count = 0
+
+    # (1) email standard
+    def _email_sub(m):
+        nonlocal count
+        count += 1
+        return "[REDACTED_EMAIL]"
+
+    t = EMAIL_RE.sub(_email_sub, text)
+    if count &gt; 0:
+        return t, count
+
+    # (2) fallback par contexte (robuste m&#xEA;me si ASR &#x201C;massacre&#x201D; le local-part)
+    ctx = re.compile(
+        r"(\byou can reach me\b|\breach me\b)\s*(?:@)?\s*([a-z0-9.\s]{3,80})"
+        r"(?=\b(?:also|my phone|phone number|order number|thank)\b|$)",
+        re.IGNORECASE
+    )
+
+    def _ctx_sub(m):
+        nonlocal count
+        count += 1
+        return m.group(1) + " [REDACTED_EMAIL]"
+
+    return ctx.sub(_ctx_sub, t), count
+
+def redact_phone(text: str) -&gt; Tuple[str, int]:
+    count = 0
+
+    def _sub(m):
+        nonlocal count
+        count += 1
+        return "[REDACTED_PHONE]"
+
+    return PHONE_RE.sub(_sub, text), count
+
+def redact_pii(text: str) -&gt; Tuple[str, Dict[str, int]]:
+    """
+    Post-traitement + redaction PII:
+    - normalise tokens &#xE9;pel&#xE9;s (digits, dot/at)
+    - masque order id (contexte)
+    - masque email (standard ou contexte)
+    - masque t&#xE9;l&#xE9;phone (s&#xE9;quences de digits)
+    """
+    stats = {"emails": 0, "phones": 0, "orders": 0}
+
+    t = normalize_spelled_tokens(text)
+
+    t, n_orders = redact_order_id(t)
+    stats["orders"] += n_orders
+
+    t, n_emails = redact_spoken_email(t)
+    stats["emails"] += n_emails
+
+    t, n_phones = redact_phone(t)
+    stats["phones"] += n_phones
+
+    return t, stats
+  </div></div>
+
+  <div class="remarque">
+    Ce post-traitement est volontairement heuristique et optimis&#xE9; pour un contexte &#x201C;call center&#x201D; (PII parl&#xE9;e/&#xE9;pel&#xE9;e). Il peut produire des faux positifs sur d&#x2019;autres transcriptions.
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487773664"></h4>
+<div class="question-content " id="question-idm45617487773664">Relancer l'exp&#xE9;rience et comparer les r&#xE9;sultats (&#xE0; expliquer dans le rapport).</div>
+</div>
+
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487773152"></h4>
+<div class="question-content " id="question-idm45617487773152">
+    Dans le rapport, &#xE9;crivez une r&#xE9;flexion courte (5&#x2013;8 lignes max)&#xA0;:
+    quelles erreurs de transcription Whisper impactent le plus vos analytics (intention, PII)&#xA0;?
+    Donnez au moins un exemple concret observ&#xE9; (mot cl&#xE9; manqu&#xE9;, PII non d&#xE9;tect&#xE9;e, etc.).
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617490691456"></span><span class="tip-content " id="tip-idm45617490691456">
+      Pensez &#xE0; la robustesse produit&#xA0;: une intention &#x201C;refund&#x201D; rat&#xE9;e peut changer une d&#xE9;cision de routage, alors qu&#x2019;un mot de politesse est peu critique.
+    </span></span>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617490690176">TTS léger : générer une réponse “agent” et contrôler latence/qualité</h3>
+<div class="exercice-content " id="exercice-idm45617490690176">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617490689776"></h4>
+<div class="question-content " id="question-idm45617490689776">
+    Cr&#xE9;ez le fichier <span class="code "><span class="code-container">TP3/tts_reply.py</span></span> &#xE0; partir du code ci-dessous, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    Le script doit&#xA0;:
+    g&#xE9;n&#xE9;rer une courte r&#xE9;ponse vocale (anglais) &#xE0; partir d&#x2019;un mod&#xE8;le TTS gratuit Hugging Face, sauvegarder un WAV, et mesurer le temps total ainsi qu&#x2019;un RTF (Real-Time Factor).
+    <div class="remarque">
+      Gardez le message court (quelques secondes) pour rester sous les budgets de temps. Ne commitez pas l&#x2019;audio g&#xE9;n&#xE9;r&#xE9;&#xA0;: une capture et des m&#xE9;tadonn&#xE9;es suffisent.
+    </div>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import time
+
+import numpy as np
+import torch
+from transformers import pipeline
+import torchaudio
+
+def main():
+    os.makedirs("TP3/outputs", exist_ok=True)
+
+    text = (
+        "Thanks for calling. I am sorry your order arrived damaged. "
+        "I can offer a replacement or a refund. "
+        "Please confirm your preferred option."
+    )
+
+    # Mod&#xE8;le TTS l&#xE9;ger (anglais)
+    tts_model_id = "facebook/________"   # Trouvez un mod&#xE8;le de TTS (ici, donn&#xE9; par Facebook par exemple)
+
+    device = 0 if torch.cuda.is_available() else -1
+    tts = pipeline(
+        task="text-to-speech",
+        model=tts_model_id,
+        device=device
+    )
+
+    t0 = time.time()
+    out = tts(text)
+    t1 = time.time()
+
+    audio = np.asarray(out["audio"], dtype=np.float32)                 # numpy array
+    sr = int(out["sampling_rate"])
+    elapsed_s = t1 - t0
+    audio_dur_s = float(audio.shape[1] / float(sr))
+    rtf = elapsed_s / max(audio_dur_s, 1e-9)
+
+    # normaliser la forme vers [1, T]
+    if audio.ndim == 1:                 # [T]
+        audio = audio[None, :]          # [1, T]
+    elif audio.ndim == 2:
+        # cas [T, 1] -&gt; [1, T]
+        if audio.shape[1] == 1:
+            audio = audio.T             # [1, T]
+        # cas [1, T] d&#xE9;j&#xE0; OK
+        elif audio.shape[0] == 1:
+            pass
+        else:
+            # cas multi-canaux [T, C] -&gt; [C, T]
+            audio = audio.T
+    else:
+        raise ValueError(f"Unexpected audio shape: {audio.shape}")
+
+    out_wav = "outputs/tts_reply_call_01.wav"  # ex: tts_reply_call_01
+
+    wav_t = torch.from_numpy(audio.astype(np.float32))  # [C, T]
+    torchaudio.save(out_wav, wav_t, sr)
+
+    print("tts_model_id:", tts_model_id)
+    print("device:", "cuda" if device == 0 else "cpu")
+    print("audio_dur_s:", round(audio_dur_s, 2))
+    print("elapsed_s:", round(elapsed_s, 2))
+    print("rtf:", round(rtf, 3))
+    print("saved:", out_wav)
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617486856896"></span><span class="tip-content " id="tip-idm45617486856896">
+      Le champ <span class="code "><span class="code-container">out["audio"]</span></span> est d&#xE9;j&#xE0; un tableau numpy. Le paquet <span class="code "><span class="code-container">soundfile</span></span> est souvent celui qui manque lorsqu&#x2019;on veut &#xE9;crire un WAV.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487103120"></h4>
+<div class="question-content " id="question-idm45617487103120">
+    Ex&#xE9;cutez <span class="code "><span class="code-container">tts_reply.py</span></span> et ajoutez au rapport une capture d&#x2019;&#xE9;cran montrant&#xA0;:
+    <span class="code "><span class="code-container">tts_model_id</span></span>, <span class="code "><span class="code-container">audio_dur_s</span></span>, <span class="code "><span class="code-container">elapsed_s</span></span>, <span class="code "><span class="code-container">rtf</span></span>, et le chemin du fichier g&#xE9;n&#xE9;r&#xE9;.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python TP3/tts_reply.py
+    </div></div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487597232"></h4>
+<div class="question-content " id="question-idm45617487597232">
+    V&#xE9;rifiez les m&#xE9;tadonn&#xE9;es du WAV g&#xE9;n&#xE9;r&#xE9; (dur&#xE9;e, sample rate, canaux) et ajoutez au rapport une capture d&#x2019;&#xE9;cran contenant les lignes pertinentes.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+ffprobe TP3/outputs/tts_reply_call_01.wav
+# ou
+soxi TP3/outputs/tts_reply_call_01.wav
+    </div></div>
+    <div class="remarque">
+      Inutile de coller toute la sortie brute&#xA0;: une capture lisible suffit.
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487106160"></h4>
+<div class="question-content " id="question-idm45617487106160">
+    Dans le rapport, &#xE9;crivez une observation courte (4&#x2013;6 lignes max) sur la qualit&#xE9; TTS&#xA0;:
+    intelligibilit&#xE9;, prosodie, artefacts &#xE9;ventuels (metallic, coupures), et latence per&#xE7;ue au vu du RTF.
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487344480"></span><span class="tip-content " id="tip-idm45617487344480">
+      Une remarque factuelle suffit. Par exemple&#xA0;: &#x201C;prononciation OK, rythme un peu monotone, RTF ~ 0.3 donc compatible temps r&#xE9;el&#x201D;.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487343456"></h4>
+<div class="question-content " id="question-idm45617487343456">
+      &#xC9;valuer l&#x2019;intelligibilit&#xE9; de la TTS via ASR.
+      L&#x2019;id&#xE9;e est de transcrire le WAV g&#xE9;n&#xE9;r&#xE9; avec Whisper, puis de comparer grossi&#xE8;rement au texte source.
+
+    Cr&#xE9;ez <span class="code "><span class="code-container">TP3/asr_tts_check.py</span></span> &#xE0; partir du code ci-dessous et compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import time
+import torch
+from transformers import pipeline
+
+def main():
+    wav_path = "TP3/outputs/________.wav"    
+    model_id = "openai/________"            
+
+    device = 0 if torch.cuda.is_available() else -1
+    asr = pipeline(
+        task="automatic-speech-recognition",
+        model=model_id,
+        device=device
+    )
+
+    t0 = time.time()
+    generate_kwargs = {
+        "language": "english"
+    }
+    out = asr(wav_path, generate_kwargs=generate_kwargs)   # out: {"text": "...", ...}
+    t1 = time.time()
+
+    print("model_id:", model_id)
+    print("elapsed_s:", round(t1 - t0, 2))
+    print("text:", out.get("text","").strip())
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+  </div>
+</div>
+</div>
+</div>
+
+<div class="exercice-container ">
+<h3 class="exercice-toggle
+          toggle
+          " data-toggle-to="exercice-idm45617486995792">Intégration : pipeline end-to-end + rapport d’ingénierie (léger)</h3>
+<div class="exercice-content " id="exercice-idm45617486995792">
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486995424"></h4>
+<div class="question-content " id="question-idm45617486995424">
+    Cr&#xE9;ez le fichier <span class="code "><span class="code-container">TP3/run_pipeline.py</span></span> &#xE0; partir du code ci-dessous, puis compl&#xE9;tez les trous <span class="code "><span class="code-container">________</span></span>.
+    Le script doit ex&#xE9;cuter l&#x2019;ensemble de la cha&#xEE;ne sur <span class="code "><span class="code-container">call_01.wav</span></span> dans cet ordre&#xA0;:
+    VAD &#x2192; ASR &#x2192; analytics &#x2192; TTS (optionnel).
+    <div class="remarque">
+      L&#x2019;objectif est d&#x2019;avoir un point d&#x2019;entr&#xE9;e unique &#x201C;type produit&#x201D; et de produire un petit r&#xE9;sum&#xE9; final.
+      Vous ne devez pas g&#xE9;n&#xE9;rer de gros fichiers&#xA0;: uniquement des JSON l&#xE9;gers et &#xE9;ventuellement un WAV TTS.
+    </div>
+
+    <div class="code code-block"><div class="code-container" data-code-prettify="python">
+import os
+import json
+import subprocess
+from pathlib import Path
+
+def run(cmd: str):
+    print("&gt;&gt;", cmd)
+    subprocess.run(cmd, shell=True, check=True)
+
+def load_json(path: str):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def main():
+    os.makedirs("TP3/outputs", exist_ok=True)
+
+    # 1) VAD
+    run("python TP3/________")
+    vad = load_json("TP3/outputs/vad_segments_call_01.json")
+
+    # 2) ASR
+    run("python TP3/________")
+    asr = load_json("TP3/outputs/asr_call_01.json")
+
+    # 3) Analytics
+    run("python TP3/________")
+    summ = load_json("TP3/outputs/call_summary_call_01.json")
+
+    # 4) TTS (optionnel) : si le script existe, on lance
+    tts_path = Path("TP3/tts_reply.py")
+    tts_done = False
+    if tts_path.exists():
+        run("python TP3/tts_reply.py")
+        tts_done = True
+
+    # R&#xE9;sum&#xE9; final (l&#xE9;ger)
+    summary = {
+        "audio_path": vad.get("audio_path"),
+        "duration_s": vad.get("duration_s"),
+        "num_segments": vad.get("stats", {}).get("num_segments"),
+        "speech_ratio": vad.get("stats", {}).get("speech_ratio"),
+        "asr_model": asr.get("model_id"),
+        "asr_device": asr.get("device"),
+        "asr_rtf": asr.get("rtf"),
+        "intent": summ.get("intent"),
+        "pii_stats": summ.get("pii_stats"),
+        "tts_generated": tts_done
+    }
+
+    out_path = "TP3/outputs/pipeline_summary_call_01.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, indent=2)
+
+    print("=== PIPELINE SUMMARY ===")
+    for k, v in summary.items():
+        print(f"{k}: {v}")
+    print("saved:", out_path)
+
+if __name__ == "__main__":
+    main()
+    </div></div>
+
+    
+
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487157680"></span><span class="tip-content " id="tip-idm45617487157680">
+      Si une &#xE9;tape &#xE9;choue, c&#x2019;est souvent un probl&#xE8;me de d&#xE9;pendances ou de chemins.
+      V&#xE9;rifiez que <span class="code "><span class="code-container">TP3/outputs/</span></span> contient bien les JSON attendus apr&#xE8;s chaque &#xE9;tape.
+    </span></span>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486933264"></h4>
+<div class="question-content " id="question-idm45617486933264">
+    Ex&#xE9;cutez <span class="code "><span class="code-container">run_pipeline.py</span></span> (id&#xE9;alement dans un <span class="code "><span class="code-container">srun</span></span> GPU si disponible).
+    Ajoutez au rapport une capture d&#x2019;&#xE9;cran montrant le r&#xE9;sum&#xE9; final (<span class="code "><span class="code-container">PIPELINE SUMMARY</span></span>) et le fichier de sortie cr&#xE9;&#xE9;.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+python TP3/run_pipeline.py
+    </div></div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617487746368"></h4>
+<div class="question-content " id="question-idm45617487746368">
+    Ouvrez <span class="code "><span class="code-container">TP3/outputs/pipeline_summary_call_01.json</span></span> et ajoutez au rapport un extrait contenant au minimum&#xA0;:
+    <span class="code "><span class="code-container">num_segments</span></span>, <span class="code "><span class="code-container">speech_ratio</span></span>, <span class="code "><span class="code-container">asr_rtf</span></span>, <span class="code "><span class="code-container">intent</span></span>, <span class="code "><span class="code-container">pii_stats</span></span>.
+    <div class="code code-block"><div class="code-container" data-code-prettify="bash">
+cat TP3/outputs/pipeline_summary_call_01.json
+    </div></div>
+    <div class="remarque">
+      Ce fichier est petit&#xA0;: vous pouvez le copier/coller int&#xE9;gralement dans le rapport si vous le souhaitez.
+    </div>
+  </div>
+</div>
+
+  <div class="question-container ">
+<h4 class="question-toggle
+          toggle
+          " data-toggle-to="question-idm45617486655888"></h4>
+<div class="question-content " id="question-idm45617486655888">
+    Dans le rapport, &#xE9;crivez un court &#x201C;engineering note&#x201D; (8&#x2013;12 lignes max) r&#xE9;pondant &#xE0; ces points&#xA0;:
+    <ul>
+      <li>Quel est le goulet d&#x2019;&#xE9;tranglement principal (temps) dans votre pipeline&#xA0;?</li>
+      <li>Quelle &#xE9;tape est la plus fragile (qualit&#xE9;) et pourquoi&#xA0;?</li>
+      <li>Deux am&#xE9;liorations concr&#xE8;tes si vous deviez industrialiser (sans entra&#xEE;ner de mod&#xE8;le).</li>
+    </ul>
+    <span class="tip-container "><span class="tip-toggle
+          toggle
+          " data-toggle-to="tip-idm45617487607088"></span><span class="tip-content " id="tip-idm45617487607088">
+      Exemples d&#x2019;am&#xE9;liorations acceptables&#xA0;: meilleure normalisation texte, calibration VAD, meilleure redaction PII, batching ASR, cache mod&#xE8;le, contr&#xF4;le longueur segments.
+    </span></span>
+  </div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div></div>
+
+
+  	<div class='footer'>
+			<div class='logo'>
+        <a href="https://www.telecom-sudparis.eu">
+	<img src="../../infra-web-cours/wp/wp-content/themes/tsp-inf/tsp.png" 
+			 width="75"
+			 height="75"
+			 alt="Telecom SudParis"/>
+</a>
+
+<a href="https://www.imt.fr">
+	<img src="../../infra-web-cours/wp/wp-content/themes/tsp-inf/imt.jpg" 
+			 width="143"
+			 height="75"
+			 alt="Telecom SudParis"/>
+</a>
+			</div>
+
+			<div class='address'>
+        <p><b><a href="https://www.telecom-sudparis.eu" class="hide-link">
+	Telecom SudParis</a></b><br/>
+	<b><a href="https://www.ip-paris.fr/en" class="hide-link">
+		Institut Polytechnique de Paris</a></b></p>
+<p>9, rue Charles Fourier<br/>
+	F-91011 Evry Cedex France</p>
+<p>19, Place Marguerite Perey<br/>
+	F-91120 Palaiseau Cedex France<br/></p>
+
+			</div>
+		
+			<div class='copyright'>
+        &#9400; 2020&#x2013;2026 Télécom SudParis
+			</div>
+		</div>
+
+    <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+		<div>
+			  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/lang-lisp.js"></script>
+  <script src='../../infra-web-cours/wp/wp-content/themes/tsp-inf/menu.js'></script>
+  <script src='../../infra-web-cours/infra-web-cours/current/tsp.js'></script>
+		</div>
+	</body>
+</html>
