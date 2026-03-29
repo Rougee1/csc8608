@@ -1,29 +1,27 @@
 # TP2 — Rapport : Génération d'images (diffusion, e-commerce)
 
-**Dépôt** : *(à compléter : URL GitHub)*  
-**Environnement** : *(ex. conda `eurosat`, nœud GPU SLURM)*
+**Dépôt** : https://github.com/Rougee1/csc8608.git  
+**Environnement** : conda `eurosat`, nœud GPU SLURM (`arcadia-slurm-node-2`)
 
 ---
 
 ## Exercice 1 — Mise en place & smoke test (GPU + Diffusers)
 
-### Question 1 — *(contenu à mettre dans le rapport : capture smoke + diagnostic éventuel)*
+### Question 1 — Smoke test + diagnostic éventuel
 
 **Capture de `smoke.png` :**
 
 ![Smoke test](report/capture_smoke.png)
 
-*(Remplacez le chemin par votre fichier réel, ex. `report/capture_smoke.png`, une fois la capture ajoutée dans `TP2/report/`.)*
-
 **Diagnostic (uniquement si problème : OOM, CUDA, etc.) :**
 
-- Aucun problème bloquant constaté *(ou : décrire en une phrase, ex. « OOM résolu en passant de 50 à 20 steps »)*.
+- Aucun problème bloquant au smoke test. Le pipeline a généré `smoke.png` correctement sur GPU.
 
 ---
 
 ## Exercice 2 — Factoriser le pipeline (`pipeline_utils.py`) & baseline (`experiments.py`)
 
-### Question 2 — *(rapport : capture `baseline.png` + configuration affichée)*
+### Question 2 — Baseline + configuration
 
 **Capture de `outputs/baseline.png` :**
 
@@ -49,9 +47,9 @@ Même prompt e-commerce (anglais), même seed `42` pour tous les runs :
 
 > *Professional e-commerce product photo of a ceramic coffee mug on a clean white background, soft studio lighting, sharp focus, catalog style*
 
-### Question 3.2 — *(rapport : grille ou 6 captures + commentaire qualitatif)*
+### Question 3.2 — Comparaison qualitative des 6 runs
 
-**Grille des résultats (à remplacer par vos captures réelles après `python TP2/experiments.py t2i`) :**
+**Grille des résultats :**
 
 | Run | Fichier | steps | guidance | scheduler |
 |-----|---------|-------|----------|-----------|
@@ -76,13 +74,13 @@ Même prompt e-commerce (anglais), même seed `42` pour tous les runs :
 
 ### Question 4.1 — Image source
 
-- Fichier utilisé : `TP2/inputs/product_sample.jpg` *(généré automatiquement en placeholder si absent, ou votre propre photo dans `inputs/`)*.
+- Fichier utilisé : `TP2/inputs/product_sample.jpg` (placeholder produit généré automatiquement par `experiments.py` si absent).
 
 **Capture « avant » (image source) :**
 
 ![Image source produit](report/capture_source_product.png)
 
-### Question 4.2 — *(rapport : comparaison strength 0.35 / 0.60 / 0.85)*
+### Question 4.2 — Comparaison strength 0.35 / 0.60 / 0.85
 
 | Run | Fichier | strength |
 |-----|---------|----------|
@@ -94,23 +92,50 @@ Même prompt e-commerce (anglais), même seed `42` pour tous les runs :
 
 **Analyse qualitative :**
 
-- **Conservé à strength faible (0.35)** : forme globale et cadrage proches de la source ; le produit reste reconnaissable.
-- **Changements à strength moyen (0.60)** : textures, arrière-plan et lumière évoluent nettement tout en gardant une cohérence avec l’entrée.
-- **Strength élevé (0.85)** : forte créativité ; risque que le produit « dérive » par rapport à la photo réelle — **moins utilisable tel quel en e-commerce** sans relecture (risque de non-conformité avec l’article vendu).
+- **Observation technique** : `i2i_run07_strength035.png` et `i2i_run08_strength060.png` ont été générées mais les fichiers sont anormalement petits (~842 octets), donc résultats visuels non exploitables.
+- **Run exploitable** : `i2i_run09_strength085.png` est correctement générée et montre une forte dérive visuelle (strength élevé), confirmant l’éloignement de la source.
+- **Impact e-commerce** : à strength élevé, le risque de non-conformité produit augmente (le rendu peut ne plus représenter fidèlement l’objet d’entrée).
 
 ---
 
 ## Exercice 5 — Mini-produit Streamlit (MVP)
 
-### Question 5 — *(rapport : deux captures — Text2Img et Img2Img avec Config)*
+### Question 5 — Deux captures Streamlit (Text2Img et Img2Img avec Config)
 
 **Text2Img + bloc Config :**
 
 ![Streamlit Text2Img](report/capture_streamlit_t2i.png)
 
+```json
+{
+  "mode": "Text2Img",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "scheduler": "EulerA",
+  "seed": 42,
+  "steps": 30,
+  "guidance": 7.5,
+  "height": 512,
+  "width": 512
+}
+```
+
 **Img2Img + bloc Config :**
 
 ![Streamlit Img2Img](report/capture_streamlit_i2i.png)
+
+```json
+{
+  "mode": "Img2Img",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "scheduler": "EulerA",
+  "seed": 42,
+  "steps": 30,
+  "guidance": 7.5,
+  "strength": 0.6,
+  "height": 512,
+  "width": 512
+}
+```
 
 **Lancement (rappel) :**
 
@@ -137,20 +162,20 @@ Critères (entiers 0–2 chacun, **total sur 10**) :
 | E-commerce usability | 2 = publiable après retouches mineures |
 | Reproducibility | 2 = paramètres suffisants pour reproduire |
 
-### Question 6.2 — *(au moins 3 images évaluées)*
+### Question 6.2 — Évaluation d’au moins 3 images
 
 **1) Text2Img baseline** (`t2i_run01_baseline.png` ou `baseline.png`)
 
 | Critère | Score |
 |---------|-------|
-| Prompt adherence | 1 |
-| Visual realism | 1 |
+| Prompt adherence | 2 |
+| Visual realism | 2 |
 | Artifacts | 1 |
-| E-commerce usability | 1 |
+| E-commerce usability | 2 |
 | Reproducibility | 2 |
-| **Total** | **6 / 10** |
+| **Total** | **9 / 10** |
 
-- Justification : rendu crédible pour un mock catalogue ; petits défauts possibles sur les bords ou le fond ; seed + config documentés permettent de reproduire.
+- Justification : image cohérente avec le prompt e-commerce (fond blanc, lumière studio), peu d’artefacts visibles, et configuration complète pour reproduction.
 
 **2) Text2Img paramètre extrême** *(ex. `t2i_run05_guid12.png`, guidance haute)*
 
@@ -176,9 +201,7 @@ Critères (entiers 0–2 chacun, **total sur 10**) :
 | Reproducibility | 2 |
 | **Total** | **5 / 10** |
 
-- Justification : forte dérive par rapport au produit source ; risque marketing / conformité ; intéressant pour explorer des styles, pas pour remplacer une photo fidèle sans contrôle.
-
-*(Ajustez les scores après observation de vos propres images.)*
+- Justification : forte dérive par rapport à la source ; utile pour stylisation, mais risqué pour une fiche produit sans validation humaine.
 
 ### Question 6.3 — Paragraphe de réflexion (8–12 lignes)
 
@@ -192,4 +215,4 @@ Critères (entiers 0–2 chacun, **total sur 10**) :
 
 ## Fin du rapport
 
-*(Ajoutez vos captures dans `TP2/report/` et mettez à jour les chemins `![...](report/...)` ci-dessus.)*
+Le rapport est aligné avec les sorties disponibles dans `TP2/report/` et les paramètres réellement utilisés.
